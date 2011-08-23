@@ -92,7 +92,7 @@
     Film *film = [user.queue objectAtIndex:indexPath.row];
     
     cell.textLabel.text = film.title;
-    cell.detailTextLabel.text = film.year;
+    cell.detailTextLabel.text = film.year.description;
     cell.imageView.image = [UIImage imageNamed:@"rango-w342.jpg"];
     
     return cell;

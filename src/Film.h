@@ -1,8 +1,3 @@
 
-@interface Film : NSObject
+NewType2Interface(Film, NSString, title, NSNumber, year)
 
-@property (readonly) NSString *title;
-@property (readonly) NSString *year;
-
-+ (Film *)filmWithTitle:(NSString *)title year:(NSString *)year;
-@end

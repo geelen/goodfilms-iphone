@@ -27,20 +27,13 @@
     NSURLResponse *response = NULL;
     NSError *error = NULL;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    NSString *s = [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease];
+
     
     if (responseData) {
+        NSString *s = [NSString stringWithData:responseData];
         SBJSON *parser = [SBJSON new];
         NSArray *parsedObject = [parser objectWithString:s error:&error];
-        NSMutableArray *result = [NSMutableArray array];
-        for (NSDictionary *filmData in parsedObject) {
-            NSLog(@"%@", filmData);
-            NSString *title = [filmData objectForKey:@"title"];
-            NSString *year = [[filmData objectForKey:@"year"] description];
-            if (title && year) {
-                [result addObject:[Film filmWithTitle:title year:year]];
-            }
-        }
+        NSArray *result = [parsedObject mapOption:functionP(NSDictionaryToFilm)];
         [parser release];
         return result;
     } else {
