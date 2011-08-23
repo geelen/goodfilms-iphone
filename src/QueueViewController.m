@@ -88,8 +88,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
-    cell.textLabel.text = [NSString stringWithFormat:@"Movie %d", indexPath.row];
+    Film *film = [user.queue objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = film.title;
     
     return cell;
 }
