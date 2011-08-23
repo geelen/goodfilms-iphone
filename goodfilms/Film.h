@@ -3,5 +3,5 @@
 
 @property (readonly) NSString *title;
 
-+ (Film *)movieWithTitle:(NSString *)title;
++ (Film *)filmWithTitle:(NSString *)title;
 @end

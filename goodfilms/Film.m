@@ -18,7 +18,7 @@
     return self;
 }
 
-+ (Film *)movieWithTitle:(NSString *)title {
++ (Film *)filmWithTitle:(NSString *)title {
     return [[[self alloc] initWithTitle:title] autorelease];
 }
 @end
