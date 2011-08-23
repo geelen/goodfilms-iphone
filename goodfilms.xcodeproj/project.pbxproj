@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F164DA2614035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
+		F164DA2814035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
+		F164DA2A14035A48005D786F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2914035A48005D786F /* CoreGraphics.framework */; };
+		F164DA3014035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA2E14035A48005D786F /* InfoPlist.strings */; };
+		F164DA3214035A48005D786F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3114035A48005D786F /* main.m */; };
+		F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */; };
+		F164DA3914035A48005D786F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA3714035A48005D786F /* MainWindow.xib */; };
+		F164DA3C14035A48005D786F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3B14035A48005D786F /* FirstViewController.m */; };
+		F164DA3F14035A48005D786F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3E14035A48005D786F /* SecondViewController.m */; };
+		F164DA4214035A48005D786F /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4014035A48005D786F /* FirstView.xib */; };
+		F164DA4514035A48005D786F /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4314035A48005D786F /* SecondView.xib */; };
+		F164DA4D14035A48005D786F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA4C14035A48005D786F /* SenTestingKit.framework */; };
+		F164DA4E14035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
+		F164DA4F14035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
+		F164DA5014035A48005D786F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2914035A48005D786F /* CoreGraphics.framework */; };
+		F164DA5814035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5614035A48005D786F /* InfoPlist.strings */; };
+		F164DA5A14035A48005D786F /* goodfilmsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5914035A48005D786F /* goodfilmsTests.h */; };
+		F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA5B14035A48005D786F /* goodfilmsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F164DA5114035A48005D786F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F164DA1814035A48005D786F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F164DA2014035A48005D786F;
+			remoteInfo = goodfilms;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F164DA2114035A48005D786F /* goodfilms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodfilms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F164DA2514035A48005D786F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F164DA2714035A48005D786F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F164DA2914035A48005D786F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F164DA2D14035A48005D786F /* goodfilms-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goodfilms-Info.plist"; sourceTree = "<group>"; };
+		F164DA2F14035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F164DA3114035A48005D786F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F164DA3314035A48005D786F /* goodfilms-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goodfilms-Prefix.pch"; sourceTree = "<group>"; };
+		F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsAppDelegate.h; sourceTree = "<group>"; };
+		F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsAppDelegate.m; sourceTree = "<group>"; };
+		F164DA3814035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F164DA3A14035A48005D786F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		F164DA3B14035A48005D786F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F164DA3D14035A48005D786F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F164DA3E14035A48005D786F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F164DA4114035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		F164DA4414035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		F164DA4B14035A48005D786F /* goodfilmsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goodfilmsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F164DA4C14035A48005D786F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F164DA5514035A48005D786F /* goodfilmsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goodfilmsTests-Info.plist"; sourceTree = "<group>"; };
+		F164DA5714035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F164DA5914035A48005D786F /* goodfilmsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsTests.h; sourceTree = "<group>"; };
+		F164DA5B14035A48005D786F /* goodfilmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F164DA1E14035A48005D786F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA2614035A48005D786F /* UIKit.framework in Frameworks */,
+				F164DA2814035A48005D786F /* Foundation.framework in Frameworks */,
+				F164DA2A14035A48005D786F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F164DA4714035A48005D786F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA4D14035A48005D786F /* SenTestingKit.framework in Frameworks */,
+				F164DA4E14035A48005D786F /* UIKit.framework in Frameworks */,
+				F164DA4F14035A48005D786F /* Foundation.framework in Frameworks */,
+				F164DA5014035A48005D786F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F164DA1614035A48005D786F = {
+			isa = PBXGroup;
+			children = (
+				F164DA2B14035A48005D786F /* goodfilms */,
+				F164DA5314035A48005D786F /* goodfilmsTests */,
+				F164DA2414035A48005D786F /* Frameworks */,
+				F164DA2214035A48005D786F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F164DA2214035A48005D786F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA2114035A48005D786F /* goodfilms.app */,
+				F164DA4B14035A48005D786F /* goodfilmsTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F164DA2414035A48005D786F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA2514035A48005D786F /* UIKit.framework */,
+				F164DA2714035A48005D786F /* Foundation.framework */,
+				F164DA2914035A48005D786F /* CoreGraphics.framework */,
+				F164DA4C14035A48005D786F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F164DA2B14035A48005D786F /* goodfilms */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */,
+				F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */,
+				F164DA3714035A48005D786F /* MainWindow.xib */,
+				F164DA3A14035A48005D786F /* FirstViewController.h */,
+				F164DA3B14035A48005D786F /* FirstViewController.m */,
+				F164DA3D14035A48005D786F /* SecondViewController.h */,
+				F164DA3E14035A48005D786F /* SecondViewController.m */,
+				F164DA4014035A48005D786F /* FirstView.xib */,
+				F164DA4314035A48005D786F /* SecondView.xib */,
+				F164DA2C14035A48005D786F /* Supporting Files */,
+			);
+			path = goodfilms;
+			sourceTree = "<group>";
+		};
+		F164DA2C14035A48005D786F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA2D14035A48005D786F /* goodfilms-Info.plist */,
+				F164DA2E14035A48005D786F /* InfoPlist.strings */,
+				F164DA3114035A48005D786F /* main.m */,
+				F164DA3314035A48005D786F /* goodfilms-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F164DA5314035A48005D786F /* goodfilmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA5914035A48005D786F /* goodfilmsTests.h */,
+				F164DA5B14035A48005D786F /* goodfilmsTests.m */,
+				F164DA5414035A48005D786F /* Supporting Files */,
+			);
+			path = goodfilmsTests;
+			sourceTree = "<group>";
+		};
+		F164DA5414035A48005D786F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F164DA5514035A48005D786F /* goodfilmsTests-Info.plist */,
+				F164DA5614035A48005D786F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F164DA2014035A48005D786F /* goodfilms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F164DA5F14035A48005D786F /* Build configuration list for PBXNativeTarget "goodfilms" */;
+			buildPhases = (
+				F164DA1D14035A48005D786F /* Sources */,
+				F164DA1E14035A48005D786F /* Frameworks */,
+				F164DA1F14035A48005D786F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goodfilms;
+			productName = goodfilms;
+			productReference = F164DA2114035A48005D786F /* goodfilms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F164DA4A14035A48005D786F /* goodfilmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F164DA6214035A48005D786F /* Build configuration list for PBXNativeTarget "goodfilmsTests" */;
+			buildPhases = (
+				F164DA4614035A48005D786F /* Sources */,
+				F164DA4714035A48005D786F /* Frameworks */,
+				F164DA4814035A48005D786F /* Resources */,
+				F164DA4914035A48005D786F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F164DA5214035A48005D786F /* PBXTargetDependency */,
+			);
+			name = goodfilmsTests;
+			productName = goodfilmsTests;
+			productReference = F164DA4B14035A48005D786F /* goodfilmsTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F164DA1814035A48005D786F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F164DA1B14035A48005D786F /* Build configuration list for PBXProject "goodfilms" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F164DA1614035A48005D786F;
+			productRefGroup = F164DA2214035A48005D786F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F164DA2014035A48005D786F /* goodfilms */,
+				F164DA4A14035A48005D786F /* goodfilmsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F164DA1F14035A48005D786F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA3014035A48005D786F /* InfoPlist.strings in Resources */,
+				F164DA3914035A48005D786F /* MainWindow.xib in Resources */,
+				F164DA4214035A48005D786F /* FirstView.xib in Resources */,
+				F164DA4514035A48005D786F /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F164DA4814035A48005D786F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA5814035A48005D786F /* InfoPlist.strings in Resources */,
+				F164DA5A14035A48005D786F /* goodfilmsTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F164DA4914035A48005D786F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F164DA1D14035A48005D786F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA3214035A48005D786F /* main.m in Sources */,
+				F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */,
+				F164DA3C14035A48005D786F /* FirstViewController.m in Sources */,
+				F164DA3F14035A48005D786F /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F164DA4614035A48005D786F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F164DA5214035A48005D786F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F164DA2014035A48005D786F /* goodfilms */;
+			targetProxy = F164DA5114035A48005D786F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F164DA2E14035A48005D786F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F164DA2F14035A48005D786F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F164DA3714035A48005D786F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F164DA3814035A48005D786F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		F164DA4014035A48005D786F /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F164DA4114035A48005D786F /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		F164DA4314035A48005D786F /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F164DA4414035A48005D786F /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+		F164DA5614035A48005D786F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F164DA5714035A48005D786F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F164DA5D14035A48005D786F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F164DA5E14035A48005D786F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F164DA6014035A48005D786F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F164DA6114035A48005D786F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F164DA6314035A48005D786F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goodfilms.app/goodfilms";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "goodfilmsTests/goodfilmsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F164DA6414035A48005D786F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goodfilms.app/goodfilms";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "goodfilmsTests/goodfilmsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F164DA1B14035A48005D786F /* Build configuration list for PBXProject "goodfilms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F164DA5D14035A48005D786F /* Debug */,
+				F164DA5E14035A48005D786F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F164DA5F14035A48005D786F /* Build configuration list for PBXNativeTarget "goodfilms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F164DA6014035A48005D786F /* Debug */,
+				F164DA6114035A48005D786F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F164DA6214035A48005D786F /* Build configuration list for PBXNativeTarget "goodfilmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F164DA6314035A48005D786F /* Debug */,
+				F164DA6414035A48005D786F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F164DA1814035A48005D786F /* Project object */;
+}
