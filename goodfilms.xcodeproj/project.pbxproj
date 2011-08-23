@@ -16,8 +16,8 @@
 		F164DA3914035A48005D786F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA3714035A48005D786F /* MainWindow.xib */; };
 		F164DA3C14035A48005D786F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3B14035A48005D786F /* FirstViewController.m */; };
 		F164DA3F14035A48005D786F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3E14035A48005D786F /* SecondViewController.m */; };
-		F164DA4214035A48005D786F /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4014035A48005D786F /* FirstView.xib */; };
-		F164DA4514035A48005D786F /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4314035A48005D786F /* SecondView.xib */; };
+		F164DA4214035A48005D786F /* QueueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4014035A48005D786F /* QueueView.xib */; };
+		F164DA4514035A48005D786F /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4314035A48005D786F /* SearchView.xib */; };
 		F164DA4D14035A48005D786F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA4C14035A48005D786F /* SenTestingKit.framework */; };
 		F164DA4E14035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
 		F164DA4F14035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
@@ -25,6 +25,10 @@
 		F164DA5814035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5614035A48005D786F /* InfoPlist.strings */; };
 		F164DA5A14035A48005D786F /* goodfilmsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5914035A48005D786F /* goodfilmsTests.h */; };
 		F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA5B14035A48005D786F /* goodfilmsTests.m */; };
+		F164DA6814035ECB005D786F /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA6614035ECB005D786F /* QueueViewController.m */; };
+		F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6714035ECB005D786F /* QueueViewController.xib */; };
+		F164DA6D14035F12005D786F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA6B14035F12005D786F /* SearchViewController.m */; };
+		F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6C14035F12005D786F /* SearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,12 @@
 		F164DA5714035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F164DA5914035A48005D786F /* goodfilmsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsTests.h; sourceTree = "<group>"; };
 		F164DA5B14035A48005D786F /* goodfilmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsTests.m; sourceTree = "<group>"; };
+		F164DA6514035ECB005D786F /* QueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueViewController.h; sourceTree = "<group>"; };
+		F164DA6614035ECB005D786F /* QueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueViewController.m; sourceTree = "<group>"; };
+		F164DA6714035ECB005D786F /* QueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueViewController.xib; sourceTree = "<group>"; };
+		F164DA6A14035F12005D786F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F164DA6B14035F12005D786F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F164DA6C14035F12005D786F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +138,15 @@
 				F164DA3B14035A48005D786F /* FirstViewController.m */,
 				F164DA3D14035A48005D786F /* SecondViewController.h */,
 				F164DA3E14035A48005D786F /* SecondViewController.m */,
-				F164DA4014035A48005D786F /* FirstView.xib */,
-				F164DA4314035A48005D786F /* SecondView.xib */,
+				F164DA4014035A48005D786F /* QueueView.xib */,
+				F164DA4314035A48005D786F /* SearchView.xib */,
 				F164DA2C14035A48005D786F /* Supporting Files */,
+				F164DA6514035ECB005D786F /* QueueViewController.h */,
+				F164DA6614035ECB005D786F /* QueueViewController.m */,
+				F164DA6714035ECB005D786F /* QueueViewController.xib */,
+				F164DA6A14035F12005D786F /* SearchViewController.h */,
+				F164DA6B14035F12005D786F /* SearchViewController.m */,
+				F164DA6C14035F12005D786F /* SearchViewController.xib */,
 			);
 			path = goodfilms;
 			sourceTree = "<group>";
@@ -234,8 +250,10 @@
 			files = (
 				F164DA3014035A48005D786F /* InfoPlist.strings in Resources */,
 				F164DA3914035A48005D786F /* MainWindow.xib in Resources */,
-				F164DA4214035A48005D786F /* FirstView.xib in Resources */,
-				F164DA4514035A48005D786F /* SecondView.xib in Resources */,
+				F164DA4214035A48005D786F /* QueueView.xib in Resources */,
+				F164DA4514035A48005D786F /* SearchView.xib in Resources */,
+				F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */,
+				F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,8 @@
 				F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */,
 				F164DA3C14035A48005D786F /* FirstViewController.m in Sources */,
 				F164DA3F14035A48005D786F /* SecondViewController.m in Sources */,
+				F164DA6814035ECB005D786F /* QueueViewController.m in Sources */,
+				F164DA6D14035F12005D786F /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,20 +333,20 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		F164DA4014035A48005D786F /* FirstView.xib */ = {
+		F164DA4014035A48005D786F /* QueueView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F164DA4114035A48005D786F /* en */,
 			);
-			name = FirstView.xib;
+			name = QueueView.xib;
 			sourceTree = "<group>";
 		};
-		F164DA4314035A48005D786F /* SecondView.xib */ = {
+		F164DA4314035A48005D786F /* SearchView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F164DA4414035A48005D786F /* en */,
 			);
-			name = SecondView.xib;
+			name = SearchView.xib;
 			sourceTree = "<group>";
 		};
 		F164DA5614035A48005D786F /* InfoPlist.strings */ = {

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  SearchViewController.h
 //  goodfilms
 //
 //  Created by Glen Maddern on 23/08/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SearchViewController : UITableViewController
 
 @end
