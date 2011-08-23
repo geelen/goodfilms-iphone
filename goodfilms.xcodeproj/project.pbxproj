@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F160C18C1403719900290128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F160C1781403719900290128 /* InfoPlist.strings */; };
+		F160C18D1403719900290128 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C17A1403719900290128 /* MainWindow.xib */; };
+		F160C18E1403719900290128 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C17D1403719900290128 /* Film.m */; };
+		F160C18F1403719900290128 /* goodfilms-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F160C17E1403719900290128 /* goodfilms-Info.plist */; };
+		F160C1901403719900290128 /* goodfilms.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F160C1801403719900290128 /* goodfilms.entitlements */; };
+		F160C1911403719900290128 /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1821403719900290128 /* goodfilmsAppDelegate.m */; };
+		F160C1921403719900290128 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1831403719900290128 /* main.m */; };
+		F160C1931403719900290128 /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1851403719900290128 /* QueueViewController.m */; };
+		F160C1941403719900290128 /* QueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C1861403719900290128 /* QueueViewController.xib */; };
+		F160C1951403719900290128 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1881403719900290128 /* SearchViewController.m */; };
+		F160C1961403719900290128 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C1891403719900290128 /* SearchViewController.xib */; };
+		F160C1971403719900290128 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C18B1403719900290128 /* User.m */; };
 		F164DA2614035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
 		F164DA2814035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
 		F164DA2A14035A48005D786F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2914035A48005D786F /* CoreGraphics.framework */; };
-		F164DA3014035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA2E14035A48005D786F /* InfoPlist.strings */; };
-		F164DA3214035A48005D786F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3114035A48005D786F /* main.m */; };
-		F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */; };
-		F164DA3914035A48005D786F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA3714035A48005D786F /* MainWindow.xib */; };
 		F164DA4D14035A48005D786F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA4C14035A48005D786F /* SenTestingKit.framework */; };
 		F164DA4E14035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
 		F164DA4F14035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
@@ -21,13 +29,6 @@
 		F164DA5814035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5614035A48005D786F /* InfoPlist.strings */; };
 		F164DA5A14035A48005D786F /* goodfilmsTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5914035A48005D786F /* goodfilmsTests.h */; };
 		F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA5B14035A48005D786F /* goodfilmsTests.m */; };
-		F164DA6814035ECB005D786F /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA6614035ECB005D786F /* QueueViewController.m */; };
-		F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6714035ECB005D786F /* QueueViewController.xib */; };
-		F164DA6D14035F12005D786F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA6B14035F12005D786F /* SearchViewController.m */; };
-		F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6C14035F12005D786F /* SearchViewController.xib */; };
-		F19290C81403632400FDBB12 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = F19290C71403632400FDBB12 /* Film.m */; };
-		F19290D1140367BA00FDBB12 /* goodfilms.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19290D0140367BA00FDBB12 /* goodfilms.entitlements */; };
-		F19290D4140368FF00FDBB12 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F19290D3140368FF00FDBB12 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,35 +42,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F160C1791403719900290128 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F160C17B1403719900290128 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		F160C17C1403719900290128 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
+		F160C17D1403719900290128 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
+		F160C17E1403719900290128 /* goodfilms-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "goodfilms-Info.plist"; sourceTree = "<group>"; };
+		F160C17F1403719900290128 /* goodfilms-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "goodfilms-Prefix.pch"; sourceTree = "<group>"; };
+		F160C1801403719900290128 /* goodfilms.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
+		F160C1811403719900290128 /* goodfilmsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goodfilmsAppDelegate.h; sourceTree = "<group>"; };
+		F160C1821403719900290128 /* goodfilmsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goodfilmsAppDelegate.m; sourceTree = "<group>"; };
+		F160C1831403719900290128 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F160C1841403719900290128 /* QueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueViewController.h; sourceTree = "<group>"; };
+		F160C1851403719900290128 /* QueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueViewController.m; sourceTree = "<group>"; };
+		F160C1861403719900290128 /* QueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueViewController.xib; sourceTree = "<group>"; };
+		F160C1871403719900290128 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		F160C1881403719900290128 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		F160C1891403719900290128 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		F160C18A1403719900290128 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		F160C18B1403719900290128 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		F164DA2114035A48005D786F /* goodfilms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodfilms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F164DA2514035A48005D786F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F164DA2714035A48005D786F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F164DA2914035A48005D786F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F164DA2D14035A48005D786F /* goodfilms-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goodfilms-Info.plist"; sourceTree = "<group>"; };
-		F164DA2F14035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F164DA3114035A48005D786F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F164DA3314035A48005D786F /* goodfilms-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goodfilms-Prefix.pch"; sourceTree = "<group>"; };
-		F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsAppDelegate.h; sourceTree = "<group>"; };
-		F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsAppDelegate.m; sourceTree = "<group>"; };
-		F164DA3814035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		F164DA4B14035A48005D786F /* goodfilmsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goodfilmsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F164DA4C14035A48005D786F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F164DA5514035A48005D786F /* goodfilmsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goodfilmsTests-Info.plist"; sourceTree = "<group>"; };
 		F164DA5714035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F164DA5914035A48005D786F /* goodfilmsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsTests.h; sourceTree = "<group>"; };
 		F164DA5B14035A48005D786F /* goodfilmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsTests.m; sourceTree = "<group>"; };
-		F164DA6514035ECB005D786F /* QueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueViewController.h; sourceTree = "<group>"; };
-		F164DA6614035ECB005D786F /* QueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueViewController.m; sourceTree = "<group>"; };
-		F164DA6714035ECB005D786F /* QueueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueViewController.xib; sourceTree = "<group>"; };
-		F164DA6A14035F12005D786F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		F164DA6B14035F12005D786F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		F164DA6C14035F12005D786F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		F19290C61403632400FDBB12 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
-		F19290C71403632400FDBB12 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
-		F19290CE1403679400FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
-		F19290D0140367BA00FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
-		F19290D2140368FF00FDBB12 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; path = User.h; sourceTree = "<group>"; };
-		F19290D3140368FF00FDBB12 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F160C1771403719900290128 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F160C1781403719900290128 /* InfoPlist.strings */,
+				F160C17A1403719900290128 /* MainWindow.xib */,
+				F160C17C1403719900290128 /* Film.h */,
+				F160C17D1403719900290128 /* Film.m */,
+				F160C17E1403719900290128 /* goodfilms-Info.plist */,
+				F160C17F1403719900290128 /* goodfilms-Prefix.pch */,
+				F160C1801403719900290128 /* goodfilms.entitlements */,
+				F160C1811403719900290128 /* goodfilmsAppDelegate.h */,
+				F160C1821403719900290128 /* goodfilmsAppDelegate.m */,
+				F160C1831403719900290128 /* main.m */,
+				F160C1841403719900290128 /* QueueViewController.h */,
+				F160C1851403719900290128 /* QueueViewController.m */,
+				F160C1861403719900290128 /* QueueViewController.xib */,
+				F160C1871403719900290128 /* SearchViewController.h */,
+				F160C1881403719900290128 /* SearchViewController.m */,
+				F160C1891403719900290128 /* SearchViewController.xib */,
+				F160C18A1403719900290128 /* User.h */,
+				F160C18B1403719900290128 /* User.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		F164DA1614035A48005D786F = {
 			isa = PBXGroup;
 			children = (
-				F19290D2140368FF00FDBB12 /* User.h */,
-				F19290D3140368FF00FDBB12 /* User.m */,
-				F164DA2B14035A48005D786F /* goodfilms */,
+				F160C1771403719900290128 /* src */,
 				F164DA5314035A48005D786F /* goodfilmsTests */,
 				F164DA2414035A48005D786F /* Frameworks */,
 				F164DA2214035A48005D786F /* Products */,
@@ -127,38 +150,6 @@
 				F164DA4C14035A48005D786F /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F164DA2B14035A48005D786F /* goodfilms */ = {
-			isa = PBXGroup;
-			children = (
-				F19290CE1403679400FDBB12 /* goodfilms.entitlements */,
-				F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */,
-				F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */,
-				F164DA3714035A48005D786F /* MainWindow.xib */,
-				F164DA2C14035A48005D786F /* Supporting Files */,
-				F164DA6514035ECB005D786F /* QueueViewController.h */,
-				F164DA6614035ECB005D786F /* QueueViewController.m */,
-				F164DA6714035ECB005D786F /* QueueViewController.xib */,
-				F164DA6A14035F12005D786F /* SearchViewController.h */,
-				F164DA6B14035F12005D786F /* SearchViewController.m */,
-				F164DA6C14035F12005D786F /* SearchViewController.xib */,
-				F19290C61403632400FDBB12 /* Film.h */,
-				F19290C71403632400FDBB12 /* Film.m */,
-			);
-			path = goodfilms;
-			sourceTree = "<group>";
-		};
-		F164DA2C14035A48005D786F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F164DA2D14035A48005D786F /* goodfilms-Info.plist */,
-				F164DA2E14035A48005D786F /* InfoPlist.strings */,
-				F164DA3114035A48005D786F /* main.m */,
-				F164DA3314035A48005D786F /* goodfilms-Prefix.pch */,
-				F19290D0140367BA00FDBB12 /* goodfilms.entitlements */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F164DA5314035A48005D786F /* goodfilmsTests */ = {
@@ -247,11 +238,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F164DA3014035A48005D786F /* InfoPlist.strings in Resources */,
-				F164DA3914035A48005D786F /* MainWindow.xib in Resources */,
-				F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */,
-				F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */,
-				F19290D1140367BA00FDBB12 /* goodfilms.entitlements in Resources */,
+				F160C18C1403719900290128 /* InfoPlist.strings in Resources */,
+				F160C18D1403719900290128 /* MainWindow.xib in Resources */,
+				F160C18F1403719900290128 /* goodfilms-Info.plist in Resources */,
+				F160C1901403719900290128 /* goodfilms.entitlements in Resources */,
+				F160C1941403719900290128 /* QueueViewController.xib in Resources */,
+				F160C1961403719900290128 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F164DA3214035A48005D786F /* main.m in Sources */,
-				F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */,
-				F164DA6814035ECB005D786F /* QueueViewController.m in Sources */,
-				F164DA6D14035F12005D786F /* SearchViewController.m in Sources */,
-				F19290C81403632400FDBB12 /* Film.m in Sources */,
-				F19290D4140368FF00FDBB12 /* User.m in Sources */,
+				F160C18E1403719900290128 /* Film.m in Sources */,
+				F160C1911403719900290128 /* goodfilmsAppDelegate.m in Sources */,
+				F160C1921403719900290128 /* main.m in Sources */,
+				F160C1931403719900290128 /* QueueViewController.m in Sources */,
+				F160C1951403719900290128 /* SearchViewController.m in Sources */,
+				F160C1971403719900290128 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,18 +307,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F164DA2E14035A48005D786F /* InfoPlist.strings */ = {
+		F160C1781403719900290128 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F164DA2F14035A48005D786F /* en */,
+				F160C1791403719900290128 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F164DA3714035A48005D786F /* MainWindow.xib */ = {
+		F160C17A1403719900290128 /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F164DA3814035A48005D786F /* en */,
+				F160C17B1403719900290128 /* en */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -388,10 +380,10 @@
 		F164DA6014035A48005D786F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = goodfilms/goodfilms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = src/goodfilms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
-				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
+				GCC_PREFIX_HEADER = "src/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "src/goodfilms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -401,10 +393,10 @@
 		F164DA6114035A48005D786F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = goodfilms/goodfilms.entitlements;
+				CODE_SIGN_ENTITLEMENTS = src/goodfilms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
-				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
+				GCC_PREFIX_HEADER = "src/goodfilms-Prefix.pch";
+				INFOPLIST_FILE = "src/goodfilms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
