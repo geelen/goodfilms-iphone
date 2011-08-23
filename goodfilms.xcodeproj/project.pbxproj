@@ -14,10 +14,6 @@
 		F164DA3214035A48005D786F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3114035A48005D786F /* main.m */; };
 		F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */; };
 		F164DA3914035A48005D786F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA3714035A48005D786F /* MainWindow.xib */; };
-		F164DA3C14035A48005D786F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3B14035A48005D786F /* FirstViewController.m */; };
-		F164DA3F14035A48005D786F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA3E14035A48005D786F /* SecondViewController.m */; };
-		F164DA4214035A48005D786F /* QueueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4014035A48005D786F /* QueueView.xib */; };
-		F164DA4514035A48005D786F /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA4314035A48005D786F /* SearchView.xib */; };
 		F164DA4D14035A48005D786F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA4C14035A48005D786F /* SenTestingKit.framework */; };
 		F164DA4E14035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
 		F164DA4F14035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
@@ -53,12 +49,6 @@
 		F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goodfilmsAppDelegate.h; sourceTree = "<group>"; };
 		F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goodfilmsAppDelegate.m; sourceTree = "<group>"; };
 		F164DA3814035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		F164DA3A14035A48005D786F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		F164DA3B14035A48005D786F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		F164DA3D14035A48005D786F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		F164DA3E14035A48005D786F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		F164DA4114035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		F164DA4414035A48005D786F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		F164DA4B14035A48005D786F /* goodfilmsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goodfilmsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F164DA4C14035A48005D786F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F164DA5514035A48005D786F /* goodfilmsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goodfilmsTests-Info.plist"; sourceTree = "<group>"; };
@@ -134,12 +124,6 @@
 				F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */,
 				F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */,
 				F164DA3714035A48005D786F /* MainWindow.xib */,
-				F164DA3A14035A48005D786F /* FirstViewController.h */,
-				F164DA3B14035A48005D786F /* FirstViewController.m */,
-				F164DA3D14035A48005D786F /* SecondViewController.h */,
-				F164DA3E14035A48005D786F /* SecondViewController.m */,
-				F164DA4014035A48005D786F /* QueueView.xib */,
-				F164DA4314035A48005D786F /* SearchView.xib */,
 				F164DA2C14035A48005D786F /* Supporting Files */,
 				F164DA6514035ECB005D786F /* QueueViewController.h */,
 				F164DA6614035ECB005D786F /* QueueViewController.m */,
@@ -250,8 +234,6 @@
 			files = (
 				F164DA3014035A48005D786F /* InfoPlist.strings in Resources */,
 				F164DA3914035A48005D786F /* MainWindow.xib in Resources */,
-				F164DA4214035A48005D786F /* QueueView.xib in Resources */,
-				F164DA4514035A48005D786F /* SearchView.xib in Resources */,
 				F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */,
 				F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */,
 			);
@@ -291,8 +273,6 @@
 			files = (
 				F164DA3214035A48005D786F /* main.m in Sources */,
 				F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */,
-				F164DA3C14035A48005D786F /* FirstViewController.m in Sources */,
-				F164DA3F14035A48005D786F /* SecondViewController.m in Sources */,
 				F164DA6814035ECB005D786F /* QueueViewController.m in Sources */,
 				F164DA6D14035F12005D786F /* SearchViewController.m in Sources */,
 			);
@@ -331,22 +311,6 @@
 				F164DA3814035A48005D786F /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		F164DA4014035A48005D786F /* QueueView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F164DA4114035A48005D786F /* en */,
-			);
-			name = QueueView.xib;
-			sourceTree = "<group>";
-		};
-		F164DA4314035A48005D786F /* SearchView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F164DA4414035A48005D786F /* en */,
-			);
-			name = SearchView.xib;
 			sourceTree = "<group>";
 		};
 		F164DA5614035A48005D786F /* InfoPlist.strings */ = {
@@ -480,6 +444,7 @@
 				F164DA6114035A48005D786F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F164DA6214035A48005D786F /* Build configuration list for PBXNativeTarget "goodfilmsTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +453,7 @@
 				F164DA6414035A48005D786F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
