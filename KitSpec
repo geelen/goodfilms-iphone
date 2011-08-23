@@ -1,0 +1,4 @@
+name: goodfilms
+version: 0.1
+dependencies:
+    - SBJSON: 0.1
