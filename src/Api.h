@@ -6,5 +6,7 @@
 }
 
 - (NSArray *)queueForUser:(User *)user;
+- (id)initWithBase:(NSString *)b;
 
++ (Api *)localhost;
 @end

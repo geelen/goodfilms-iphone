@@ -1,5 +1,6 @@
 #import "QueueViewController.h"
 #import "Film.h"
+#import "Api.h"
 
 @implementation QueueViewController
 
@@ -85,12 +86,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     Film *film = [user.queue objectAtIndex:indexPath.row];
     
     cell.textLabel.text = film.title;
+    cell.detailTextLabel.text = film.year;
+    cell.imageView.image = [UIImage imageNamed:@"rango-w342.jpg"];
     
     return cell;
 }
@@ -150,9 +153,8 @@
 
 #pragma Queue loading
 - (void)loadQueue {
-    sleep(5);
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    user.queue = [NSArray arrayWithObjects:[Film filmWithTitle:@"1"], nil];
+    user.queue = [[Api localhost] queueForUser:user];
     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     [pool release];
 }
