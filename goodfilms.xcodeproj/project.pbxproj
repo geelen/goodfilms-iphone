@@ -27,6 +27,7 @@
 		F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6C14035F12005D786F /* SearchViewController.xib */; };
 		F19290C81403632400FDBB12 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = F19290C71403632400FDBB12 /* Film.m */; };
 		F19290D1140367BA00FDBB12 /* goodfilms.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19290D0140367BA00FDBB12 /* goodfilms.entitlements */; };
+		F19290D4140368FF00FDBB12 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F19290D3140368FF00FDBB12 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +64,12 @@
 		F164DA6A14035F12005D786F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		F164DA6B14035F12005D786F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		F164DA6C14035F12005D786F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
-		F19290C61403632400FDBB12 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Film.h; sourceTree = "<group>"; };
+		F19290C61403632400FDBB12 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
 		F19290C71403632400FDBB12 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Film.m; sourceTree = "<group>"; };
 		F19290CE1403679400FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
 		F19290D0140367BA00FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
+		F19290D2140368FF00FDBB12 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; path = User.h; sourceTree = "<group>"; };
+		F19290D3140368FF00FDBB12 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 		F164DA1614035A48005D786F = {
 			isa = PBXGroup;
 			children = (
+				F19290D2140368FF00FDBB12 /* User.h */,
+				F19290D3140368FF00FDBB12 /* User.m */,
 				F164DA2B14035A48005D786F /* goodfilms */,
 				F164DA5314035A48005D786F /* goodfilmsTests */,
 				F164DA2414035A48005D786F /* Frameworks */,
@@ -287,6 +292,7 @@
 				F164DA6814035ECB005D786F /* QueueViewController.m in Sources */,
 				F164DA6D14035F12005D786F /* SearchViewController.m in Sources */,
 				F19290C81403632400FDBB12 /* Film.m in Sources */,
+				F19290D4140368FF00FDBB12 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
