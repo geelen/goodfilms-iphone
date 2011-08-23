@@ -19,6 +19,7 @@
 		F160C1951403719900290128 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1881403719900290128 /* SearchViewController.m */; };
 		F160C1961403719900290128 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C1891403719900290128 /* SearchViewController.xib */; };
 		F160C1971403719900290128 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C18B1403719900290128 /* User.m */; };
+		F160C19E1403722900290128 /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C19D1403722900290128 /* Api.m */; };
 		F164DA2614035A48005D786F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2514035A48005D786F /* UIKit.framework */; };
 		F164DA2814035A48005D786F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2714035A48005D786F /* Foundation.framework */; };
 		F164DA2A14035A48005D786F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F164DA2914035A48005D786F /* CoreGraphics.framework */; };
@@ -60,6 +61,8 @@
 		F160C1891403719900290128 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		F160C18A1403719900290128 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F160C18B1403719900290128 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F160C19C1403722900290128 /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		F160C19D1403722900290128 /* Api.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Api.m; sourceTree = "<group>"; };
 		F164DA2114035A48005D786F /* goodfilms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goodfilms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F164DA2514035A48005D786F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F164DA2714035A48005D786F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,26 +103,52 @@
 		F160C1771403719900290128 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F160C1781403719900290128 /* InfoPlist.strings */,
+				F160C19B1403721100290128 /* API */,
+				F160C19A140371F100290128 /* Other */,
+				F160C199140371DB00290128 /* Model */,
 				F160C17A1403719900290128 /* MainWindow.xib */,
-				F160C17C1403719900290128 /* Film.h */,
-				F160C17D1403719900290128 /* Film.m */,
-				F160C17E1403719900290128 /* goodfilms-Info.plist */,
-				F160C17F1403719900290128 /* goodfilms-Prefix.pch */,
-				F160C1801403719900290128 /* goodfilms.entitlements */,
 				F160C1811403719900290128 /* goodfilmsAppDelegate.h */,
 				F160C1821403719900290128 /* goodfilmsAppDelegate.m */,
-				F160C1831403719900290128 /* main.m */,
 				F160C1841403719900290128 /* QueueViewController.h */,
 				F160C1851403719900290128 /* QueueViewController.m */,
 				F160C1861403719900290128 /* QueueViewController.xib */,
 				F160C1871403719900290128 /* SearchViewController.h */,
 				F160C1881403719900290128 /* SearchViewController.m */,
 				F160C1891403719900290128 /* SearchViewController.xib */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F160C199140371DB00290128 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F160C17C1403719900290128 /* Film.h */,
+				F160C17D1403719900290128 /* Film.m */,
 				F160C18A1403719900290128 /* User.h */,
 				F160C18B1403719900290128 /* User.m */,
 			);
-			path = src;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F160C19A140371F100290128 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F160C1781403719900290128 /* InfoPlist.strings */,
+				F160C17E1403719900290128 /* goodfilms-Info.plist */,
+				F160C17F1403719900290128 /* goodfilms-Prefix.pch */,
+				F160C1801403719900290128 /* goodfilms.entitlements */,
+				F160C1831403719900290128 /* main.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		F160C19B1403721100290128 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F160C19C1403722900290128 /* Api.h */,
+				F160C19D1403722900290128 /* Api.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		F164DA1614035A48005D786F = {
@@ -285,6 +314,7 @@
 				F160C1931403719900290128 /* QueueViewController.m in Sources */,
 				F160C1951403719900290128 /* SearchViewController.m in Sources */,
 				F160C1971403719900290128 /* User.m in Sources */,
+				F160C19E1403722900290128 /* Api.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
