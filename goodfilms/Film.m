@@ -1,6 +1,6 @@
-#import "Movie.h"
+#import "Film.h"
 
-@implementation Movie
+@implementation Film
 
 @synthesize title;
 
@@ -18,7 +18,7 @@
     return self;
 }
 
-+ (Movie *)movieWithTitle:(NSString *)title {
++ (Film *)movieWithTitle:(NSString *)title {
     return [[[self alloc] initWithTitle:title] autorelease];
 }
 @end
