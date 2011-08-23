@@ -25,6 +25,8 @@
 		F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6714035ECB005D786F /* QueueViewController.xib */; };
 		F164DA6D14035F12005D786F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F164DA6B14035F12005D786F /* SearchViewController.m */; };
 		F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F164DA6C14035F12005D786F /* SearchViewController.xib */; };
+		F19290C81403632400FDBB12 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = F19290C71403632400FDBB12 /* Movie.m */; };
+		F19290D1140367BA00FDBB12 /* goodfilms.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F19290D0140367BA00FDBB12 /* goodfilms.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		F164DA6A14035F12005D786F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		F164DA6B14035F12005D786F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		F164DA6C14035F12005D786F /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		F19290C61403632400FDBB12 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		F19290C71403632400FDBB12 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		F19290CE1403679400FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
+		F19290D0140367BA00FDBB12 /* goodfilms.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = goodfilms.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		F164DA2B14035A48005D786F /* goodfilms */ = {
 			isa = PBXGroup;
 			children = (
+				F19290CE1403679400FDBB12 /* goodfilms.entitlements */,
 				F164DA3414035A48005D786F /* goodfilmsAppDelegate.h */,
 				F164DA3514035A48005D786F /* goodfilmsAppDelegate.m */,
 				F164DA3714035A48005D786F /* MainWindow.xib */,
@@ -131,6 +138,8 @@
 				F164DA6A14035F12005D786F /* SearchViewController.h */,
 				F164DA6B14035F12005D786F /* SearchViewController.m */,
 				F164DA6C14035F12005D786F /* SearchViewController.xib */,
+				F19290C61403632400FDBB12 /* Movie.h */,
+				F19290C71403632400FDBB12 /* Movie.m */,
 			);
 			path = goodfilms;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 				F164DA2E14035A48005D786F /* InfoPlist.strings */,
 				F164DA3114035A48005D786F /* main.m */,
 				F164DA3314035A48005D786F /* goodfilms-Prefix.pch */,
+				F19290D0140367BA00FDBB12 /* goodfilms.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,6 +246,7 @@
 				F164DA3914035A48005D786F /* MainWindow.xib in Resources */,
 				F164DA6914035ECB005D786F /* QueueViewController.xib in Resources */,
 				F164DA6E14035F12005D786F /* SearchViewController.xib in Resources */,
+				F19290D1140367BA00FDBB12 /* goodfilms.entitlements in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +286,7 @@
 				F164DA3614035A48005D786F /* goodfilmsAppDelegate.m in Sources */,
 				F164DA6814035ECB005D786F /* QueueViewController.m in Sources */,
 				F164DA6D14035F12005D786F /* SearchViewController.m in Sources */,
+				F19290C81403632400FDBB12 /* Movie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +382,7 @@
 		F164DA6014035A48005D786F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = goodfilms/goodfilms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
 				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
@@ -382,6 +395,7 @@
 		F164DA6114035A48005D786F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = goodfilms/goodfilms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
 				INFOPLIST_FILE = "goodfilms/goodfilms-Info.plist";
