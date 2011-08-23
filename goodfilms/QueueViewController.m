@@ -1,14 +1,9 @@
-//
-//  QueueViewController.m
-//  goodfilms
-//
-//  Created by Glen Maddern on 23/08/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "QueueViewController.h"
+#import "Film.h"
 
 @implementation QueueViewController
+
+@synthesize user;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,6 +44,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self performSelectorInBackground:@selector(loadQueue) withObject:nil];
     [super viewWillAppear:animated];
 }
 
@@ -75,18 +71,12 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 4;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return user.queue.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -157,4 +147,12 @@
      */
 }
 
+#pragma Queue loading
+- (void)loadQueue {
+    sleep(5);
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    user.queue = [NSArray arrayWithObjects:[Film filmWithTitle:@"1"], nil];
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+    [pool release];
+}
 @end

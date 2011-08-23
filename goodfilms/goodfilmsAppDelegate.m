@@ -6,20 +6,47 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "User.h"
+#import "Film.h"
+
 #import "goodfilmsAppDelegate.h"
 
 @implementation goodfilmsAppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize rootController, queueViewController, searchViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    // Add the tab bar controller's current view as a subview of the window
-    self.window.rootViewController = self.tabBarController;
+
+    // TODO Pull this out into a separate controller subclass.
+    UIViewController *signInPage = [[[UIViewController alloc] initWithNibName:nil bundle:nil] autorelease];
+    signInPage.title = @"Sign in";
+    
+    UIButton *signInButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
+    [signInButton addTarget:self action:@selector(makeSignInOccur) forControlEvents:UIControlEventTouchUpInside];
+    
+    signInButton.frame = CGRectMake(0, 0, 200, 100);
+    [signInPage.view addSubview:signInButton];
+    
+    self.rootController = [[[UINavigationController alloc] initWithRootViewController:signInPage] autorelease];
+    [self.rootController setNavigationBarHidden:YES];
+    
+    self.window.rootViewController = self.rootController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)makeSignInOccur {
+    User *u = [[User alloc] init];
+    queueViewController.user = u;
+    [self.rootController pushViewController:self.tabBarController animated:YES];
+}
+
+- (void)signOut {
+    [self.rootController popViewControllerAnimated:YES];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

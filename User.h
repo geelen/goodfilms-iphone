@@ -11,6 +11,7 @@
 @interface User : NSObject
 
 // Contains Films
-@property (readonly) NSArray *queue;
+
+@property (readwrite, retain) NSArray *queue;
 
 @end
