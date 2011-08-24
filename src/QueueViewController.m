@@ -99,16 +99,16 @@
 
 
         [[cell contentView] addSubview:^{
-            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(65, 0, 205, 30)] autorelease];
+            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(70, 10, 200, 20)] autorelease];
             l.tag = TITLE_TAG;
-            l.font = [UIFont boldSystemFontOfSize:16.0f];
+            l.font = [UIFont boldSystemFontOfSize:18.0f];
             return l;
         }()];
 
         [[cell contentView] addSubview:^{
-            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(280, 0, 40, 30)] autorelease];
+            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(270, 10, 50, 20)] autorelease];
             l.tag = SUBTITLE_TAG;
-            l.font = [UIFont systemFontOfSize:16.0f];
+            l.font = [UIFont systemFontOfSize:18.0f];
             l.textColor = [UIColor grayColor];
             return l;
         }()];
