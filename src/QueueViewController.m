@@ -1,6 +1,7 @@
 #import "QueueViewController.h"
 #import "Film.h"
 #import "Api.h"
+#import "EGOImageView.h"
 
 @implementation QueueViewController
 
@@ -80,6 +81,10 @@
     return user.queue.count;
 }
 
+#define IMAGE_TAG 5555
+#define TITLE_TAG (IMAGE_TAG+1)
+#define SUBTITLE_TAG (IMAGE_TAG+2)
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -87,16 +92,41 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+
+        EGOImageView *imageView = [[[EGOImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 90)] autorelease];
+        imageView.tag = IMAGE_TAG;
+        [[cell contentView] addSubview:imageView];
+
+
+        [[cell contentView] addSubview:^{
+            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(65, 0, 205, 30)] autorelease];
+            l.tag = TITLE_TAG;
+            l.font = [UIFont boldSystemFontOfSize:16.0f];
+            return l;
+        }()];
+
+        [[cell contentView] addSubview:^{
+            UILabel *l = [[[UILabel alloc] initWithFrame:CGRectMake(280, 0, 40, 30)] autorelease];
+            l.tag = SUBTITLE_TAG;
+            l.font = [UIFont systemFontOfSize:16.0f];
+            l.textColor = [UIColor grayColor];
+            return l;
+        }()];
     }
     
+    EGOImageView *imageView = (EGOImageView *)[[cell contentView] viewWithTag:IMAGE_TAG];
+    UILabel *titleLabel = (UILabel *)[[cell contentView] viewWithTag:TITLE_TAG];
+    UILabel *subtitleLabel = (UILabel *)[[cell contentView] viewWithTag:SUBTITLE_TAG];
+
     Film *film = [user.queue objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = film.title;
-    cell.detailTextLabel.text = film.year.description;
-    cell.imageView.image = [UIImage imageNamed:@"rango-w342.jpg"];
+    titleLabel.text = film.title;
+    subtitleLabel.text = film.year.description;
+    imageView.imageURL = [NSURL URLWithString:film.image_url];
     
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -150,6 +180,12 @@
      [detailViewController release];
      */
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 90.0f;
+}
+
 
 #pragma Queue loading
 - (void)loadQueue {

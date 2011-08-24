@@ -1,3 +1,3 @@
 
-NewType2Interface(Film, NSString, title, NSNumber, year)
+NewType3Interface(Film, NSString, title, NSNumber, year, NSString, image_url)
 

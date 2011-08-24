@@ -43,6 +43,6 @@
 }
 
 + (Api *)localhost {
-    return [[[self alloc] initWithBase:@"http://localhost:3000"] autorelease];
+    return [[[self alloc] initWithBase:@"http://goodfil.ms"] autorelease];
 }
 @end

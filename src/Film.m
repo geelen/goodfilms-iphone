@@ -1,3 +1,3 @@
 #import "Film.h"
 
-NewType2Implementation(Film, NSString, title, NSNumber, year)
+NewType3Implementation(Film, NSString, title, NSNumber, year, NSString, image_url)
