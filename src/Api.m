@@ -22,7 +22,7 @@
 }
 
 - (NSArray *)queueForUser:(User *)user {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"/api/user/1/queue?api_key=lolbfuscation" relativeToURL:[self baseUrl]]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"/api/user/%@/queue?api_key=lolbfuscation", user.wat] relativeToURL:[self baseUrl]]];
     
     NSURLResponse *response = NULL;
     NSError *error = NULL;

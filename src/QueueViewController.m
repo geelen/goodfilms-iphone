@@ -27,6 +27,9 @@
 
 #pragma mark - View lifecycle
 
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -47,6 +50,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.tableView reloadData];
     [self performSelectorInBackground:@selector(loadQueue) withObject:nil];
     [super viewWillAppear:animated];
 }

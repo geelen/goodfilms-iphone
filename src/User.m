@@ -9,17 +9,19 @@
 
 @implementation User
 
-@synthesize queue;
+@synthesize queue, wat;
 
 - (void)dealloc {
     [queue release];
+    [wat release];
     [super dealloc];
 }
 
-- (id)init
+- (id)initWithId:(NSString *)i
 {
     self = [super init];
     if (self) {
+        wat = [i retain];
         // Initialization code here.
     }
     

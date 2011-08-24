@@ -22,4 +22,6 @@
 
 @property (nonatomic, retain) UINavigationController *rootController;
 
+@property (nonatomic, retain) UITextField *signInField;
+
 @end

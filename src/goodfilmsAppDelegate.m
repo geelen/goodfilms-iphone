@@ -15,8 +15,11 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize rootController, queueViewController, searchViewController;
+@synthesize rootController, queueViewController, searchViewController, signInField;
 
+- (void)back {
+    [rootController popViewControllerAnimated:YES];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
@@ -24,12 +27,18 @@
     UIViewController *signInPage = [[[UIViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     signInPage.title = @"Sign in";
     
+    signInPage.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(back)] autorelease];
+    
+    self.signInField = [[[UITextField alloc] initWithFrame:CGRectMake(0, 120, 50, 40)] autorelease];
+    self.signInField.text = @"1";
     UIButton *signInButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
     [signInButton addTarget:self action:@selector(makeSignInOccur) forControlEvents:UIControlEventTouchUpInside];
+
     
     signInButton.frame = CGRectMake(0, 0, 200, 100);
     [signInPage.view addSubview:signInButton];
+    [signInPage.view addSubview:signInField];
     
     self.rootController = [[[UINavigationController alloc] initWithRootViewController:signInPage] autorelease];
     [self.rootController setNavigationBarHidden:YES];
@@ -40,7 +49,7 @@
 }
 
 - (void)makeSignInOccur {
-    User *u = [[User alloc] init];
+    User *u = [[User alloc] initWithId:self.signInField.text];
     queueViewController.user = u;
     [self.rootController pushViewController:self.tabBarController animated:YES];
 }
@@ -55,6 +64,7 @@
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
+    [rootController popViewControllerAnimated:NO];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
