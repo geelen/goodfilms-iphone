@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F10DA12E140488D7007765C7 /* 45-movie-1.png */; };
 		F118131714037B3C000DF820 /* rango-w342.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F118131614037B3C000DF820 /* rango-w342.jpg */; };
+		F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1507F8C1404CA0800137C24 /* FilmViewController.m */; };
+		F1507F8F1404CA0800137C24 /* FilmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1507F8D1404CA0800137C24 /* FilmViewController.xib */; };
 		F160C18C1403719900290128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F160C1781403719900290128 /* InfoPlist.strings */; };
 		F160C18D1403719900290128 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C17A1403719900290128 /* MainWindow.xib */; };
 		F160C18E1403719900290128 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C17D1403719900290128 /* Film.m */; };
@@ -60,6 +62,9 @@
 /* Begin PBXFileReference section */
 		F10DA12E140488D7007765C7 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
 		F118131614037B3C000DF820 /* rango-w342.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rango-w342.jpg"; sourceTree = "<group>"; };
+		F1507F8B1404CA0800137C24 /* FilmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmViewController.h; path = ../assets/FilmViewController.h; sourceTree = "<group>"; };
+		F1507F8C1404CA0800137C24 /* FilmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmViewController.m; path = ../assets/FilmViewController.m; sourceTree = "<group>"; };
+		F1507F8D1404CA0800137C24 /* FilmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmViewController.xib; path = ../assets/FilmViewController.xib; sourceTree = "<group>"; };
 		F160C1791403719900290128 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F160C17B1403719900290128 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		F160C17C1403719900290128 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Film.h; sourceTree = "<group>"; };
@@ -143,6 +148,9 @@
 		F160C1771403719900290128 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F1507F8B1404CA0800137C24 /* FilmViewController.h */,
+				F1507F8C1404CA0800137C24 /* FilmViewController.m */,
+				F1507F8D1404CA0800137C24 /* FilmViewController.xib */,
 				F160C19B1403721100290128 /* API */,
 				F160C19A140371F100290128 /* Other */,
 				F160C199140371DB00290128 /* Model */,
@@ -357,6 +365,7 @@
 				F118131714037B3C000DF820 /* rango-w342.jpg in Resources */,
 				F1BEDEA9140382FA009F915A /* Kit.xcconfig in Resources */,
 				F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */,
+				F1507F8F1404CA0800137C24 /* FilmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +408,7 @@
 				F160C1951403719900290128 /* SearchViewController.m in Sources */,
 				F160C1971403719900290128 /* User.m in Sources */,
 				F160C19E1403722900290128 /* Api.m in Sources */,
+				F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

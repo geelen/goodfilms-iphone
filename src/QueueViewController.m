@@ -2,6 +2,7 @@
 #import "Film.h"
 #import "Api.h"
 #import "EGOImageView.h"
+#import "FilmViewController.h"
 
 @implementation QueueViewController
 
@@ -122,7 +123,7 @@
     
     titleLabel.text = film.title;
     subtitleLabel.text = film.year.description;
-    imageView.imageURL = [NSURL URLWithString:film.image_url];
+    imageView.imageURL = film.imageURL;
     
     return cell;
 }
@@ -172,13 +173,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    FilmViewController *detailViewController = [[FilmViewController alloc] initWithNibName:@"FilmViewController" bundle:nil];
+    detailViewController.film = [user.queue objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
