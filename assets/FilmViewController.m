@@ -10,9 +10,10 @@
 
 @implementation FilmViewController
 
-@synthesize titleLabel, imageView, queueAction, seenIt, film;
+@synthesize titleLabel, imageView, queueAction, seenIt, film, attributes;
 
 - (void)dealloc {
+    [attributes release];
     [queueAction release];
     [seenIt release];
     [titleLabel release];
@@ -43,7 +44,8 @@
     [super viewWillAppear:animated];
     titleLabel.text = film.title;
     imageView.imageURL = film.imageURL;
-    
+    self.attributes = [Film attributesToShow];
+        
     if (rand() % 2 == 0) {
         [queueAction setTitle:@"Add to queue" forState:UIControlStateNormal];
         [queueAction addTarget:self action:@selector(addToQueue:) forControlEvents:UIControlEventTouchUpInside];
@@ -69,7 +71,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10;
+    return attributes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,11 +80,13 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
-    cell.textLabel.text = @"Okay";
+    NSString *key = [attributes objectAtIndex:indexPath.row];
+    cell.textLabel.text = key;
+    cell.detailTextLabel.text = [film.metadata objectForKey:key]; 
     return cell;
 }
 
@@ -155,14 +159,17 @@
 
 - (void)dismissImage {
     [self dismissModalViewControllerAnimated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 
 - (IBAction)showImageFullscreen:(id)sender {
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     UIViewController *vc = [[[UIViewController alloc] initWithNibName:nil bundle:nil] autorelease];
     [vc.view addSubview:^{
         EGOImageButton *b = [[[EGOImageButton alloc] initWithPlaceholderImage:nil] autorelease];
-        b.frame = CGRectMake(0, 0, 320, 470);
+        b.frame = CGRectMake(0, 0, 320, 480);
         b.imageURL = film.imageURL;
+        [b setAdjustsImageWhenHighlighted:NO];
         [b addTarget:self action:@selector(dismissImage) forControlEvents:UIControlEventTouchUpInside];
         return b;
     }()];

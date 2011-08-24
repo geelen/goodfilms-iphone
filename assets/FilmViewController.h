@@ -4,6 +4,7 @@
 
 @interface FilmViewController : UITableViewController
 
+@property (readwrite, retain) NSArray *attributes;
 @property (readwrite, retain) Film *film;
 @property (readwrite, retain) IBOutlet UILabel *titleLabel;
 @property (readwrite, retain) IBOutlet EGOImageButton *imageView;

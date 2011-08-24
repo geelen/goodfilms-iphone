@@ -1,6 +1,6 @@
 #import "Film.h"
 
-NewType3Implementation(Film, NSString, title, NSNumber, year, NSString, image_url)
+NewType4Implementation(Film, NSString, title, NSNumber, year, NSString, image_url, NSDictionary, metadata)
 
 @implementation Film (more)
 
@@ -8,4 +8,7 @@ NewType3Implementation(Film, NSString, title, NSNumber, year, NSString, image_ur
     return [NSURL URLWithString:self.image_url];
 }
 
++ (NSArray *)attributesToShow {
+    return [NSArray arrayWithObjects:@"director", @"starring", @"runtime", nil];
+}
 @end
