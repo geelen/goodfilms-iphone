@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F10DA12E140488D7007765C7 /* 45-movie-1.png */; };
 		F118131714037B3C000DF820 /* rango-w342.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F118131614037B3C000DF820 /* rango-w342.jpg */; };
 		F160C18C1403719900290128 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F160C1781403719900290128 /* InfoPlist.strings */; };
 		F160C18D1403719900290128 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F160C17A1403719900290128 /* MainWindow.xib */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F10DA12E140488D7007765C7 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
 		F118131614037B3C000DF820 /* rango-w342.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rango-w342.jpg"; sourceTree = "<group>"; };
 		F160C1791403719900290128 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F160C17B1403719900290128 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		F118131514037B3C000DF820 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				F10DA12E140488D7007765C7 /* 45-movie-1.png */,
 				F118131614037B3C000DF820 /* rango-w342.jpg */,
 			);
 			name = assets;
@@ -353,6 +356,7 @@
 				F160C1961403719900290128 /* SearchViewController.xib in Resources */,
 				F118131714037B3C000DF820 /* rango-w342.jpg in Resources */,
 				F1BEDEA9140382FA009F915A /* Kit.xcconfig in Resources */,
+				F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
