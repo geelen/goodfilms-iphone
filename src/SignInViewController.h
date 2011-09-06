@@ -5,7 +5,7 @@ typedef void(^SignInSuccess)(User *);
 @interface CustomField : UITextField 
 @end
 
-@interface SignInViewController : UIViewController
+@interface SignInViewController : UIViewController <UITextFieldDelegate>
 
 @property (readwrite, retain) IBOutlet UIView *fieldContainer;
 @property (readwrite, retain) IBOutlet UITextField *emailField;

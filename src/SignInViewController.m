@@ -71,4 +71,9 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self makeSignInOccur:nil];
+    return YES;
+}
 @end
