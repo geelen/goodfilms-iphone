@@ -28,7 +28,6 @@
     NSError *error = NULL;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
-    
     if (responseData) {
         NSString *s = [NSString stringWithData:responseData];
         SBJSON *parser = [SBJSON new];
