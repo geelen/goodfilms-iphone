@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B0C7A41416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
+		47B0C7A51416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
+		47B0C7A61416224700D7AB1C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7A31416224700D7AB1C /* SignInViewController.xib */; };
+		47B0C7A71416224700D7AB1C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7A31416224700D7AB1C /* SignInViewController.xib */; };
+		47B0C7AC14162A9D00D7AB1C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AB14162A9D00D7AB1C /* logo.png */; };
+		47B0C7AD14162A9D00D7AB1C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AB14162A9D00D7AB1C /* logo.png */; };
+		47B0C7AF14162EBD00D7AB1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AE14162EBD00D7AB1C /* Default.png */; };
+		47B0C7B014162EBD00D7AB1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AE14162EBD00D7AB1C /* Default.png */; };
 		F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F10DA12E140488D7007765C7 /* 45-movie-1.png */; };
 		F118131714037B3C000DF820 /* rango-w342.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F118131614037B3C000DF820 /* rango-w342.jpg */; };
 		F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1507F8C1404CA0800137C24 /* FilmViewController.m */; };
@@ -60,6 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47B0C7A11416224700D7AB1C /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		47B0C7A21416224700D7AB1C /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		47B0C7A31416224700D7AB1C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		47B0C7AB14162A9D00D7AB1C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		47B0C7AE14162EBD00D7AB1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F10DA12E140488D7007765C7 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
 		F118131614037B3C000DF820 /* rango-w342.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rango-w342.jpg"; sourceTree = "<group>"; };
 		F1507F8B1404CA0800137C24 /* FilmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmViewController.h; path = ../assets/FilmViewController.h; sourceTree = "<group>"; };
@@ -138,6 +151,8 @@
 		F118131514037B3C000DF820 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				47B0C7AE14162EBD00D7AB1C /* Default.png */,
+				47B0C7AB14162A9D00D7AB1C /* logo.png */,
 				F10DA12E140488D7007765C7 /* 45-movie-1.png */,
 				F118131614037B3C000DF820 /* rango-w342.jpg */,
 			);
@@ -163,6 +178,9 @@
 				F160C1871403719900290128 /* SearchViewController.h */,
 				F160C1881403719900290128 /* SearchViewController.m */,
 				F160C1891403719900290128 /* SearchViewController.xib */,
+				47B0C7A11416224700D7AB1C /* SignInViewController.h */,
+				47B0C7A21416224700D7AB1C /* SignInViewController.m */,
+				47B0C7A31416224700D7AB1C /* SignInViewController.xib */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -366,6 +384,9 @@
 				F1BEDEA9140382FA009F915A /* Kit.xcconfig in Resources */,
 				F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */,
 				F1507F8F1404CA0800137C24 /* FilmViewController.xib in Resources */,
+				47B0C7A61416224700D7AB1C /* SignInViewController.xib in Resources */,
+				47B0C7AC14162A9D00D7AB1C /* logo.png in Resources */,
+				47B0C7AF14162EBD00D7AB1C /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +396,9 @@
 			files = (
 				F164DA5814035A48005D786F /* InfoPlist.strings in Resources */,
 				F164DA5A14035A48005D786F /* goodfilmsTests.h in Resources */,
+				47B0C7A71416224700D7AB1C /* SignInViewController.xib in Resources */,
+				47B0C7AD14162A9D00D7AB1C /* logo.png in Resources */,
+				47B0C7B014162EBD00D7AB1C /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +433,7 @@
 				F160C1971403719900290128 /* User.m in Sources */,
 				F160C19E1403722900290128 /* Api.m in Sources */,
 				F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */,
+				47B0C7A41416224700D7AB1C /* SignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */,
+				47B0C7A51416224700D7AB1C /* SignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

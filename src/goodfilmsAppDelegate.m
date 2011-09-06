@@ -1,15 +1,8 @@
-//
-//  goodfilmsAppDelegate.m
-//  goodfilms
-//
-//  Created by Glen Maddern on 23/08/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "User.h"
 #import "Film.h"
 
 #import "goodfilmsAppDelegate.h"
+#import "SignInViewController.h"
 
 @implementation goodfilmsAppDelegate
 
@@ -22,36 +15,21 @@
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
 
-    // TODO Pull this out into a separate controller subclass.
-    UIViewController *signInPage = [[[UIViewController alloc] initWithNibName:nil bundle:nil] autorelease];
-    signInPage.title = @"Sign in";
+    SignInViewController  *signIn = [[[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil] autorelease];
     
-    signInPage.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(back)] autorelease];
-    
-    self.signInField = [[[UITextField alloc] initWithFrame:CGRectMake(0, 120, 50, 40)] autorelease];
-    self.signInField.text = @"1";
-    UIButton *signInButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
-    [signInButton addTarget:self action:@selector(makeSignInOccur) forControlEvents:UIControlEventTouchUpInside];
-
-    
-    signInButton.frame = CGRectMake(0, 0, 200, 100);
-    [signInPage.view addSubview:signInButton];
-    [signInPage.view addSubview:signInField];
-    
-    self.rootController = [[[UINavigationController alloc] initWithRootViewController:signInPage] autorelease];
+    __block goodfilmsAppDelegate *blkSelf = self;
+    signIn.signInSuccess = ^(User *u) {
+        queueViewController.user = u;
+        [blkSelf.rootController pushViewController:blkSelf.tabBarController animated:YES];
+    };
+    self.rootController = [[[UINavigationController alloc] initWithRootViewController:signIn] autorelease];
     [self.rootController setNavigationBarHidden:YES];
     
     self.window.rootViewController = self.rootController;
     [self.window makeKeyAndVisible];
     return YES;
-}
-
-- (void)makeSignInOccur {
-    User *u = [[User alloc] initWithId:self.signInField.text];
-    queueViewController.user = u;
-    [self.rootController pushViewController:self.tabBarController animated:YES];
 }
 
 - (void)signOut {
