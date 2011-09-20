@@ -2,6 +2,7 @@
 #import "User.h"
 
 typedef void(^SignInSuccess)(User *);
+
 @interface CustomField : UITextField 
 @end
 

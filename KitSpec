@@ -6,3 +6,4 @@ dependencies:
     - functionalkit: 1.1
     - motive: 1.2.6
     - asi-http-request: 1.8
+    - facebook-ios-sdk: HEAD
