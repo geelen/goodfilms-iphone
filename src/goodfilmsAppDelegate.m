@@ -6,25 +6,35 @@
 
 @implementation goodfilmsAppDelegate
 
-@synthesize window = _window;
-@synthesize tabBarController = _tabBarController;
-@synthesize rootController, queueViewController, searchViewController, signInField;
+@synthesize window = _window, tabBarController = _tabBarController;
+@synthesize rootController, queueViewController, searchViewController, signInViewController;
+
+- (void)dealloc {
+    [_window release];
+    [_tabBarController release];
+    [rootController release];
+    [queueViewController release];
+    [searchViewController release];
+    [signInViewController release];
+    [super dealloc];
+}
 
 - (void)back {
     [rootController popViewControllerAnimated:YES];
 }
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
 
-    SignInViewController  *signIn = [[[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil] autorelease];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    
+    self.signInViewController = [[[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil] autorelease];
     
     __block goodfilmsAppDelegate *blkSelf = self;
-    signIn.signInSuccess = ^(User *u) {
-        queueViewController.user = u;
+    signInViewController.signInSuccess = ^(AccessToken *token) {
+        //queueViewController.user = u;
         [blkSelf.rootController pushViewController:blkSelf.tabBarController animated:YES];
     };
-    self.rootController = [[[UINavigationController alloc] initWithRootViewController:signIn] autorelease];
+    
+    self.rootController = [[[UINavigationController alloc] initWithRootViewController:signInViewController] autorelease];
     [self.rootController setNavigationBarHidden:YES];
     
     self.window.rootViewController = self.rootController;
@@ -36,28 +46,27 @@
     [self.rootController popViewControllerAnimated:YES];
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
+// Called by pre 4.2 clients.
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [self application:application openURL:url sourceApplication:nil annotation:nil];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [signInViewController.facebook handleOpenURL:url]; 
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
     [rootController popViewControllerAnimated:NO];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
+- (void)applicationDidEnterBackground:(UIApplication *)application {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
+- (void)applicationWillEnterForeground:(UIApplication *)application {
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -67,34 +76,10 @@
      */
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
+- (void)applicationWillTerminate:(UIApplication *)application {
     /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
 }
-
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 @end

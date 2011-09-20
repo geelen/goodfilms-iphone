@@ -1,16 +1,21 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "FBConnect.h"
 
-typedef void(^SignInSuccess)(User *);
+#define kFacebookAppId @"172347429470735"
 
-@interface CustomField : UITextField 
-@end
+NewTypeInterface(AccessToken, NSString, value);
 
-@interface SignInViewController : UIViewController <UITextFieldDelegate>
+typedef void(^SignInSuccess)(AccessToken *);
 
-@property (readwrite, retain) IBOutlet UIView *fieldContainer;
-@property (readwrite, retain) IBOutlet UITextField *emailField;
+@interface SignInViewController : UIViewController <UITextFieldDelegate, FBSessionDelegate> {
+    Facebook *facebook;
+}
+
 @property (readwrite, retain) IBOutlet UIButton *signInButton;
-
 @property (readwrite, copy) SignInSuccess signInSuccess;
+@property (readonly) Facebook *facebook;
+
+- (SignInViewController *)initWithFacebook:(Facebook *)fb;
+
 @end

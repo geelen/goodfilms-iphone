@@ -22,9 +22,7 @@
     self = [super init];
     if (self) {
         wat = [i retain];
-        // Initialization code here.
     }
-    
     return self;
 }
 

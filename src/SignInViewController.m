@@ -1,70 +1,42 @@
 #import "SignInViewController.h"
-#import "FBConnect.h"
-
-@implementation CustomField
-- (void) drawPlaceholderInRect:(CGRect)rect {
-    [super drawPlaceholderInRect:rect];
-}
-@end
 
 @implementation SignInViewController
 
-@synthesize fieldContainer, emailField, signInButton, signInSuccess;
+@synthesize signInButton, signInSuccess, facebook;
 
 - (void)dealloc {
-    [fieldContainer release];
-    [emailField release];
     [signInButton release];
     [signInSuccess release];
+    [facebook release];
     [super dealloc];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (SignInViewController *)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        facebook = [[Facebook alloc] initWithAppId:kFacebookAppId andDelegate:self];
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - View lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    fieldContainer.backgroundColor = HEXCOLOR(0x181818ff);
-    fieldContainer.layer.borderColor = [HEXCOLOR(0x585858ff) CGColor];
-    fieldContainer.layer.borderWidth = 1.0f;
-    fieldContainer.layer.cornerRadius = 5.0f;
-    
     signInButton.backgroundColor = HEXCOLOR(0x333333ff);
-
     signInButton.layer.cornerRadius = 5.0f;
-    
     self.title = @"Sign in";
-    
-    self.navigationItem.backBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(back)] autorelease];
-
-}
-
-- (IBAction)makeSignInOccur:(id)sender {
-    User *u = [[User alloc] initWithId:self.emailField.text];
-    signInSuccess(u);
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark UITextFieldDelegate
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self makeSignInOccur:nil];
-    return YES;
+#pragma mark actions
+- (IBAction)makeSignInOccur:(id)sender {
+    [facebook authorize:EMPTY_ARRAY];
+}
+
+#pragma mark FBSessionDelegate
+- (void)fbDidLogin {
+    signInSuccess([AccessToken value:facebook.accessToken]);
 }
 @end

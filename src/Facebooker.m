@@ -9,9 +9,10 @@ NewTypeImplementation(AccessToken, NSString, value);
     [super dealloc];
 }
 
-- (id)init {
+- (id)initWithFacebook:(Facebook *)fb {
     if ((self = [super init])) {
-        facebook = [[Facebook alloc] initWithAppId:@"172347429470735" andDelegate:self];
+        facebook = [fb retain];
+        facebook.sessionDelegate = self;
     }
     return self;
 }
