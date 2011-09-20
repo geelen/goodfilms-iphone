@@ -16,7 +16,6 @@
 		47B0C7AF14162EBD00D7AB1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AE14162EBD00D7AB1C /* Default.png */; };
 		47B0C7B014162EBD00D7AB1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AE14162EBD00D7AB1C /* Default.png */; };
 		47BCACCE14274799003D96D5 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47BCACCD14274799003D96D5 /* FBDialog.bundle */; };
-		47BCACD214274884003D96D5 /* Facebooker.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BCACD114274884003D96D5 /* Facebooker.m */; };
 		F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F10DA12E140488D7007765C7 /* 45-movie-1.png */; };
 		F118131714037B3C000DF820 /* rango-w342.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F118131614037B3C000DF820 /* rango-w342.jpg */; };
 		F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1507F8C1404CA0800137C24 /* FilmViewController.m */; };
@@ -76,8 +75,6 @@
 		47B0C7AB14162A9D00D7AB1C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		47B0C7AE14162EBD00D7AB1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		47BCACCD14274799003D96D5 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBDialog.bundle; path = "dev-packages/facebook-ios-sdk/resources/FBDialog.bundle"; sourceTree = SOURCE_ROOT; };
-		47BCACD014274884003D96D5 /* Facebooker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebooker.h; sourceTree = "<group>"; };
-		47BCACD114274884003D96D5 /* Facebooker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebooker.m; sourceTree = "<group>"; };
 		F10DA12E140488D7007765C7 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
 		F118131614037B3C000DF820 /* rango-w342.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rango-w342.jpg"; sourceTree = "<group>"; };
 		F1507F8B1404CA0800137C24 /* FilmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmViewController.h; path = ../assets/FilmViewController.h; sourceTree = "<group>"; };
@@ -153,15 +150,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		47BCACCF14274865003D96D5 /* Third Party */ = {
-			isa = PBXGroup;
-			children = (
-				47BCACD014274884003D96D5 /* Facebooker.h */,
-				47BCACD114274884003D96D5 /* Facebooker.m */,
-			);
-			name = "Third Party";
-			sourceTree = "<group>";
-		};
 		F118131514037B3C000DF820 /* assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +166,6 @@
 		F160C1771403719900290128 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				47BCACCF14274865003D96D5 /* Third Party */,
 				F160C19A140371F100290128 /* Other */,
 				F1507F8B1404CA0800137C24 /* FilmViewController.h */,
 				F1507F8C1404CA0800137C24 /* FilmViewController.m */,
@@ -451,7 +438,6 @@
 				F160C19E1403722900290128 /* Api.m in Sources */,
 				F1507F8E1404CA0800137C24 /* FilmViewController.m in Sources */,
 				47B0C7A41416224700D7AB1C /* SignInViewController.m in Sources */,
-				47BCACD214274884003D96D5 /* Facebooker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
