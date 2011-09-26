@@ -1,5 +1,7 @@
 #import "SignInViewController.h"
 
+NewTypeImplementation(AccessToken, NSString, value);
+
 @implementation SignInViewController
 
 @synthesize signInButton, signInSuccess, facebook;
