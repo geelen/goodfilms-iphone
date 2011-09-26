@@ -162,7 +162,7 @@
 #pragma Queue loading
 - (void)loadQueue {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    user.queue = [[Api localhost] queueForUser:user];
+    user.queue = [[Api localhost] retrieveQueue];
     [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
     [pool release];
 }

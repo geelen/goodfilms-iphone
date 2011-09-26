@@ -1,10 +1,9 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "FBConnect.h"
+#import "Api.h"
 
 #define kFacebookAppId @"172347429470735"
-
-NewTypeInterface(AccessToken, NSString, value);
 
 typedef void(^SignInSuccess)(AccessToken *);
 
@@ -15,7 +14,5 @@ typedef void(^SignInSuccess)(AccessToken *);
 @property (readwrite, retain) IBOutlet UIButton *signInButton;
 @property (readwrite, copy) SignInSuccess signInSuccess;
 @property (readonly) Facebook *facebook;
-
-- (SignInViewController *)initWithFacebook:(Facebook *)fb;
 
 @end

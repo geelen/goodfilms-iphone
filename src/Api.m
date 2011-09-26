@@ -1,7 +1,14 @@
-#import "SBJSON.h"
 #import "Api.h"
 #import "Film.h"
+#import "JSON.h"
+#import "HTTP.h"
 
+NewTypeImplementation(AccessToken, NSString, value)
+NewTypeImplementation(AuthenticationResponse, NSString, value)
+
+@interface Api (privates)
+- (NSString *)slash:(NSString *)bit;
+@end
 @implementation Api
 
 - (void)dealloc {
@@ -17,31 +24,30 @@
     return self;
 }
 
-- (NSURL *)baseUrl {
-    return [NSURL URLWithString:base];
-}
-
-- (NSArray *)queueForUser:(User *)user {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"/api/user/%@/queue?api_key=lolbfuscation", user.wat] relativeToURL:[self baseUrl]]];
-    
-    NSURLResponse *response = NULL;
-    NSError *error = NULL;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
+- (NSArray *)retrieveQueue {
+    NSData *responseData = [HTTP get:[self slash:@"/api/queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
     if (responseData) {
         NSString *s = [NSString stringWithData:responseData];
-        SBJSON *parser = [SBJSON new];
-        NSArray *parsedObject = [parser objectWithString:s error:&error];
-        NSArray *result = [parsedObject mapOption:functionP(NSDictionaryToFilm)];
-        [parser release];
-        return result;
+        NSArray *parsedObject = [JSON parse:s];
+        return [parsedObject mapOption:functionP(NSDictionaryToFilm)];
     } else {
-        NSLog(@"%@", error);
         return [NSArray array];
     }
+}
+
+- (AuthenticationResponse *)authenticate:(AccessToken *)token {
+    __unused NSData *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
+    return [AuthenticationResponse value:@"Not implemented yet."];
 }
 
 + (Api *)localhost {
     return [[[self alloc] initWithBase:@"http://goodfil.ms"] autorelease];
 }
+
+#pragma mark privates
+
+- (NSString *)slash:(NSString *)bit {
+    return [base stringByAppendingPathComponent:bit];
+}
+
 @end
