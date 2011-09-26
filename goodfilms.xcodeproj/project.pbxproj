@@ -12,6 +12,13 @@
 		473B6E67143085FF00E948CF /* HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E66143085FF00E948CF /* HTTP.m */; };
 		473B6E68143085FF00E948CF /* HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E66143085FF00E948CF /* HTTP.m */; };
 		473B6E6C14308C5300E948CF /* HTTPSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E6B14308C5300E948CF /* HTTPSpec.m */; };
+		473B6E6E14308F4900E948CF /* FilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1507F8C1404CA0800137C24 /* FilmViewController.m */; };
+		473B6E6F14308F4900E948CF /* Api.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C19D1403722900290128 /* Api.m */; };
+		473B6E7014308F4900E948CF /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C17D1403719900290128 /* Film.m */; };
+		473B6E7114308F4900E948CF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C18B1403719900290128 /* User.m */; };
+		473B6E7214308F4900E948CF /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1821403719900290128 /* goodfilmsAppDelegate.m */; };
+		473B6E7314308F4900E948CF /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1851403719900290128 /* QueueViewController.m */; };
+		473B6E7414308F4900E948CF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1881403719900290128 /* SearchViewController.m */; };
 		47B0C7A41416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
 		47B0C7A51416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
 		47B0C7A61416224700D7AB1C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7A31416224700D7AB1C /* SignInViewController.xib */; };
@@ -480,6 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473B6E6E14308F4900E948CF /* FilmViewController.m in Sources */,
+				473B6E6F14308F4900E948CF /* Api.m in Sources */,
+				473B6E7014308F4900E948CF /* Film.m in Sources */,
+				473B6E7114308F4900E948CF /* User.m in Sources */,
+				473B6E7214308F4900E948CF /* goodfilmsAppDelegate.m in Sources */,
+				473B6E7314308F4900E948CF /* QueueViewController.m in Sources */,
+				473B6E7414308F4900E948CF /* SearchViewController.m in Sources */,
 				F164DA5C14035A48005D786F /* goodfilmsTests.m in Sources */,
 				47B0C7A51416224700D7AB1C /* SignInViewController.m in Sources */,
 				473B6E64143084E500E948CF /* JSON.m in Sources */,
@@ -542,7 +556,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -564,7 +578,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -626,7 +640,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				GCC_PREFIX_HEADER = "src/goodfilms-Prefix.pch";
 				INFOPLIST_FILE = "goodfilmsTests/goodfilmsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -643,7 +657,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "goodfilms/goodfilms-Prefix.pch";
+				GCC_PREFIX_HEADER = "src/goodfilms-Prefix.pch";
 				INFOPLIST_FILE = "goodfilmsTests/goodfilmsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

@@ -16,7 +16,7 @@
 #import <UIKit/UIKit.h>
 //#import "application_headers" as required
 
-@interface HTTPSpec : SenTestCase
+@interface HTTPSpecTests : SenTestCase
 
 #if USE_APPLICATION_UNIT_TEST
 - (void)testAppDelegate;       // simple test on application
