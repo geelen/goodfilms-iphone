@@ -15,8 +15,9 @@ blue:((c>>8)&0xFF)/255.0 \
 alpha:((c)&0xFF)/255.0]
 
 
-// Toggles
-
+// Testing Toggles
 #define TESTING_FACEBOOK_TOKEN [AccessToken value:@"ABC"]
+#define TESTING_AUTH_OK
+#define TESTING_QUEUE NSARRAY([Film title:@"Some Film" year:[NSNumber numberWithInt:2011] image_url:@"" metadata:EMPTY_DICT])
 
 #endif

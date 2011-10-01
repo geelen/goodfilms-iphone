@@ -21,24 +21,37 @@ NewType2Implementation(AuthenticationResponse, NSString, value, NSString, humanM
 + (NSArray *)retrieveQueue {
     FKEither *responseData = [HTTP get:[self slash:@"/api/queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseJson:)];
+    
+#ifdef TESTING_QUEUE
+    [jsonResponse class]; // No op to prevent warning.
+    return TESTING_QUEUE;
+#else
     if ([jsonResponse isRight]) {
         NSArray *rawFilmsJson = jsonResponse.right.value;
         return [rawFilmsJson mapOption:functionP(NSDictionaryToFilm)];
     } else {
         return [NSArray array];
     }
+#endif
 }
 
 + (AuthenticationResponse *)authenticate:(AccessToken *)token {
     FKEither *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseJson:)];
+    
+#ifdef TESTING_AUTH_OK
+    [jsonResponse class]; // no op to prevent warning;
+    return [AuthenticationResponse value:@"ok" humanMessage:@""];
+#else
+    
     if (jsonResponse.isRight) {
         __unused NSDictionary *d = jsonResponse.right.value;
         return [AuthenticationResponse value:@"fail" humanMessage:@"TODO"];
     } else {
-        NSError *e = responseData.left.value;
+        NSError *e = jsonResponse.left.value;
         return [AuthenticationResponse value:@"fail" humanMessage:e.localizedDescription];
     }
+#endif
 }
 
 + (dispatch_queue_t)apiQueue {
