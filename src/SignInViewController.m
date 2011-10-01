@@ -61,12 +61,9 @@
 }
 
 - (void)handleFacebookAuthentication:(AccessToken *)token {
-    [activityView startAnimating];
-    
     dispatch_async([Api apiQueue], ^{
         AuthenticationResponse *r = [Api authenticate:token]; 
         dispatch_async(dispatch_get_main_queue(), ^{
-            [activityView stopAnimating];
             if ([r isOk]) {
                 signInSuccess();
             } else {

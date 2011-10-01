@@ -13,24 +13,28 @@
     return result;
 }
 
-+ (NSData *)get:(NSString *)urlString parameters:(NSDictionary *)parameters {
-    NSString *queryString = [self queryString:parameters];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", urlString, queryString]];
-    NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];
-    [request setHTTPMethod:@"get"];
++ (NSData *)hit:(NSString *)stringUrl request:(void (^)(NSMutableURLRequest *request))configure {
+    NSURL *url = [NSURL URLWithString:stringUrl];
+    NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];    
+    configure(request);
     NSURLResponse *response = NULL;
     NSError *error = NULL;
     return [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 }
 
-+ (NSData *)post:(NSString *)urlString parameters:(NSDictionary *)parameters {
+
++ (NSData *)get:(NSString *)urlString parameters:(NSDictionary *)parameters {
     NSString *queryString = [self queryString:parameters];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];
-    [request setHTTPMethod:@"post"];
-    [request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
-    NSURLResponse *response = NULL;
-    NSError *error = NULL;
-    return [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    return [self hit:[NSString stringWithFormat:@"%@?%@", urlString, queryString] request:^(NSMutableURLRequest *request) {
+        [request setHTTPMethod:@"get"];
+    }];
+}
+
++ (NSData *)post:(NSString *)urlString parameters:(NSDictionary *)parameters {
+    return [self hit:urlString request:^(NSMutableURLRequest *request) {
+        NSString *queryString = [self queryString:parameters];
+        [request setHTTPMethod:@"post"];
+        [request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
+    }];
 }
 @end
