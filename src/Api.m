@@ -19,24 +19,35 @@ NewType2Implementation(AuthenticationResponse, NSString, value, NSString, humanM
 @implementation Api
 
 + (NSArray *)retrieveQueue {
-    NSData *responseData = [HTTP get:[self slash:@"/api/queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
-    if (responseData) {
-        NSString *s = [NSString stringWithData:responseData];
-        NSArray *parsedObject = [JSON parse:s];
-        return [parsedObject mapOption:functionP(NSDictionaryToFilm)];
+    FKEither *responseData = [HTTP get:[self slash:@"/api/queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
+    FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseJson:)];
+    if ([jsonResponse isRight]) {
+        NSArray *rawFilmsJson = jsonResponse.right.value;
+        return [rawFilmsJson mapOption:functionP(NSDictionaryToFilm)];
     } else {
         return [NSArray array];
     }
 }
 
 + (AuthenticationResponse *)authenticate:(AccessToken *)token {
-    __unused NSData *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
-    return [AuthenticationResponse value:@"fail" humanMessage:@"Not implemented yet."];
+    FKEither *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
+    FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseJson:)];
+    if (jsonResponse.isRight) {
+        __unused NSDictionary *d = jsonResponse.right.value;
+        return [AuthenticationResponse value:@"fail" humanMessage:@"TODO"];
+    } else {
+        NSError *e = responseData.left.value;
+        return [AuthenticationResponse value:@"fail" humanMessage:e.localizedDescription];
+    }
 }
-
 
 + (dispatch_queue_t)apiQueue {
     return dispatch_get_global_queue(0, 0);
+}
+
++ (FKEither *)parseJson:(NSData *)input {
+    NSString *s = [NSString stringWithData:input];
+    return [[JSON parse:s] toEitherWithError:@"Unexpected response from goodfilms."];
 }
 
 #pragma mark privates

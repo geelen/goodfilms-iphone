@@ -13,12 +13,16 @@
     return self;
 }
 
-+ parse:(NSString *)raw {
++ (FKOption *)parse:(NSString *)raw {
     NSError *error = NULL;
     SBJSON *parser = [SBJSON new];
-    NSArray *parsedObject = [parser objectWithString:raw error:&error];
+    id parsedObject = [parser objectWithString:raw error:&error];
     [parser release];
-    return parsedObject;
+    if (error) {
+        return [FKOption none];
+    } else {
+        return [FKOption some:parsedObject];
+    }
 }
 
 @end

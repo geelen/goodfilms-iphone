@@ -4,8 +4,8 @@
 
 @interface HTTP : NSObject
 
-+ (NSData *)get:(NSString *)urlString parameters:(NSDictionary *)parameters;
++ (FKEither *)get:(NSString *)urlString parameters:(NSDictionary *)parameters;
 
-+ (NSData *)post:(NSString *)urlString parameters:(NSDictionary *)parameters;
++ (FKEither *)post:(NSString *)urlString parameters:(NSDictionary *)parameters;
 
 @end

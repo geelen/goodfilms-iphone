@@ -2,5 +2,5 @@
 
 @interface JSON : NSObject
 
-+ parse:(NSString *)raw;
++ (FKOption *)parse:(NSString *)raw;
 @end

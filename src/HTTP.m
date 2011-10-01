@@ -13,24 +13,28 @@
     return result;
 }
 
-+ (NSData *)hit:(NSString *)stringUrl request:(void (^)(NSMutableURLRequest *request))configure {
++ (FKEither *)hit:(NSString *)stringUrl request:(void (^)(NSMutableURLRequest *request))configure {
     NSURL *url = [NSURL URLWithString:stringUrl];
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];    
     configure(request);
     NSURLResponse *response = NULL;
     NSError *error = NULL;
-    return [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSData *r = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if (error) {
+        return [FKEither leftWithValue:error];
+    } else {
+        return [FKEither rightWithValue:r];
+    }
 }
 
-
-+ (NSData *)get:(NSString *)urlString parameters:(NSDictionary *)parameters {
++ (FKEither *)get:(NSString *)urlString parameters:(NSDictionary *)parameters {
     NSString *queryString = [self queryString:parameters];
     return [self hit:[NSString stringWithFormat:@"%@?%@", urlString, queryString] request:^(NSMutableURLRequest *request) {
         [request setHTTPMethod:@"get"];
     }];
 }
 
-+ (NSData *)post:(NSString *)urlString parameters:(NSDictionary *)parameters {
++ (FKEither *)post:(NSString *)urlString parameters:(NSDictionary *)parameters {
     return [self hit:urlString request:^(NSMutableURLRequest *request) {
         NSString *queryString = [self queryString:parameters];
         [request setHTTPMethod:@"post"];
