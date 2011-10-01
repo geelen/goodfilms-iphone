@@ -1,4 +1,3 @@
-#import "User.h"
 #import "Film.h"
 
 #import "goodfilmsAppDelegate.h"
@@ -30,7 +29,6 @@
     
     __block goodfilmsAppDelegate *blkSelf = self;
     signInViewController.signInSuccess = ^(AccessToken *token) {
-        //queueViewController.user = u;
         [blkSelf.rootController pushViewController:blkSelf.tabBarController animated:YES];
     };
     
@@ -46,6 +44,7 @@
     [self.rootController popViewControllerAnimated:YES];
 }
 
+#pragma mark Facebook Login Callbacks
 // Called by pre 4.2 clients.
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     return [self application:application openURL:url sourceApplication:nil annotation:nil];
@@ -57,7 +56,6 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    [rootController popViewControllerAnimated:NO];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

@@ -2,11 +2,13 @@
 
 @implementation SignInViewController
 
-@synthesize signInButton, signInSuccess, facebook;
+@synthesize signInButton, signInSuccess, facebook, activityView, signInFailure;
 
 - (void)dealloc {
+    [activityView release];
     [signInButton release];
     [signInSuccess release];
+    [signInFailure release];
     [facebook release];
     [super dealloc];
 }
@@ -37,6 +39,17 @@
 
 #pragma mark FBSessionDelegate
 - (void)fbDidLogin {
-    signInSuccess([AccessToken value:facebook.accessToken]);
+    [activityView startAnimating];
+    
+    dispatch_async([Api apiQueue], ^{
+        AuthenticationResponse *r = [Api authenticate:[AccessToken value:facebook.accessToken]]; 
+        if ([r isOk]) {
+            signInSuccess();
+        } else {
+            signInFailure(r.humanMessage);
+        }
+    });
+    
+    signInSuccess();
 }
 @end

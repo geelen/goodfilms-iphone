@@ -6,7 +6,12 @@
 
 @implementation QueueViewController
 
-@synthesize user;
+@synthesize films;
+
+- (void)dealloc {
+    [films release];
+    [super dealloc];
+}
 
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
@@ -41,7 +46,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    [self performSelectorInBackground:@selector(loadQueue) withObject:nil];
+    dispatch_async([Api apiQueue], ^{
+        NSArray *newFilms = [Api retrieveQueue];
+        self.films = newFilms;
+    });
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -54,7 +62,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return user.queue.count;
+    return films.count;
 }
 
 #define IMAGE_TAG 5555
@@ -94,7 +102,7 @@
     UILabel *titleLabel = (UILabel *)[[cell contentView] viewWithTag:TITLE_TAG];
     UILabel *subtitleLabel = (UILabel *)[[cell contentView] viewWithTag:SUBTITLE_TAG];
 
-    Film *film = [user.queue objectAtIndex:indexPath.row];
+    Film *film = [films objectAtIndex:indexPath.row];
     
     titleLabel.text = film.title;
     subtitleLabel.text = film.year.description;
@@ -149,7 +157,7 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     FilmViewController *detailViewController = [[FilmViewController alloc] initWithNibName:@"FilmViewController" bundle:nil];
-    detailViewController.film = [user.queue objectAtIndex:indexPath.row];
+    detailViewController.film = [films objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
 }
@@ -159,11 +167,4 @@
 }
 
 
-#pragma Queue loading
-- (void)loadQueue {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    user.queue = [[Api localhost] retrieveQueue];
-    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-    [pool release];
-}
 @end

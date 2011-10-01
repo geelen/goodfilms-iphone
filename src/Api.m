@@ -4,27 +4,21 @@
 #import "HTTP.h"
 
 NewTypeImplementation(AccessToken, NSString, value)
-NewTypeImplementation(AuthenticationResponse, NSString, value)
+NewType2Implementation(AuthenticationResponse, NSString, value, NSString, humanMessage)
 
-@interface Api (privates)
-- (NSString *)slash:(NSString *)bit;
+@implementation AuthenticationResponse (more)
+- (BOOL)isOk {
+    return [self.value isEqual:@"ok"];
+}
+
 @end
+@interface Api (privates)
++ (NSString *)slash:(NSString *)bit;
+@end
+
 @implementation Api
 
-- (void)dealloc {
-    [base release];
-    [super dealloc];
-}
-
-- (id)initWithBase:(NSString *)b {
-    self = [super init];
-    if (self) {
-        base = [b retain];
-    }    
-    return self;
-}
-
-- (NSArray *)retrieveQueue {
++ (NSArray *)retrieveQueue {
     NSData *responseData = [HTTP get:[self slash:@"/api/queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
     if (responseData) {
         NSString *s = [NSString stringWithData:responseData];
@@ -35,19 +29,20 @@ NewTypeImplementation(AuthenticationResponse, NSString, value)
     }
 }
 
-- (AuthenticationResponse *)authenticate:(AccessToken *)token {
++ (AuthenticationResponse *)authenticate:(AccessToken *)token {
     __unused NSData *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
-    return [AuthenticationResponse value:@"Not implemented yet."];
+    return [AuthenticationResponse value:@"fail" humanMessage:@"Not implemented yet."];
 }
 
-+ (Api *)localhost {
-    return [[[self alloc] initWithBase:@"http://goodfil.ms"] autorelease];
+
++ (dispatch_queue_t)apiQueue {
+    return dispatch_get_global_queue(0, 0);
 }
 
 #pragma mark privates
 
-- (NSString *)slash:(NSString *)bit {
-    return [base stringByAppendingPathComponent:bit];
++ (NSString *)slash:(NSString *)bit {
+    return [@"http://goodfil.ms" stringByAppendingPathComponent:bit];
 }
 
 @end

@@ -1,17 +1,16 @@
 #import <Foundation/Foundation.h>
-#import "User.h"
 
 NewTypeInterface(AccessToken, NSString, value);
-NewTypeInterface(AuthenticationResponse, NSString, value)
+NewType2Interface(AuthenticationResponse, NSString, value, NSString, humanMessage)
 
-@interface Api : NSObject {
-    NSString *base;
-}
+@interface AuthenticationResponse (more)
+- (BOOL)isOk;
+@end
 
-- (id)initWithBase:(NSString *)b;
+@interface Api : NSObject
 
-- (AuthenticationResponse *)authenticate:(AccessToken *)token;
-- (NSArray *)retrieveQueue;
++ (AuthenticationResponse *)authenticate:(AccessToken *)token;
++ (NSArray *)retrieveQueue;
 
-+ (Api *)localhost;
++ (dispatch_queue_t)apiQueue;
 @end
