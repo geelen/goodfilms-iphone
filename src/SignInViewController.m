@@ -1,5 +1,8 @@
 #import "SignInViewController.h"
 
+@interface SignInViewController (privates)
+- (void)handleFacebookAuthentication:(AccessToken *)token;
+@end
 @implementation SignInViewController
 
 @synthesize signInButton, signInSuccess, facebook, activityView, signInFailure;
@@ -32,24 +35,45 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)viewStateInProgress {
+    [activityView startAnimating];
+    [signInButton setEnabled:NO];
+}
+
+- (void)resetViewState {
+    [activityView stopAnimating];
+    [signInButton setEnabled:YES];
+}
+
 #pragma mark actions
 - (IBAction)makeSignInOccur:(id)sender {
+    [self viewStateInProgress];
+#ifdef TESTING_FACEBOOK_TOKEN
+    [self handleFacebookAuthentication:TESTING_FACEBOOK_TOKEN];
+#else
     [facebook authorize:EMPTY_ARRAY];
+#endif
 }
 
 #pragma mark FBSessionDelegate
 - (void)fbDidLogin {
+    [self handleFacebookAuthentication:[AccessToken value:facebook.accessToken]];
+}
+
+- (void)handleFacebookAuthentication:(AccessToken *)token {
     [activityView startAnimating];
     
     dispatch_async([Api apiQueue], ^{
-        AuthenticationResponse *r = [Api authenticate:[AccessToken value:facebook.accessToken]]; 
-        if ([r isOk]) {
-            signInSuccess();
-        } else {
-            signInFailure(r.humanMessage);
-        }
+        AuthenticationResponse *r = [Api authenticate:token]; 
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [activityView stopAnimating];
+            if ([r isOk]) {
+                signInSuccess();
+            } else {
+                signInFailure(r.humanMessage);
+            }
+            [self resetViewState];
+        });
     });
-    
-    signInSuccess();
 }
 @end

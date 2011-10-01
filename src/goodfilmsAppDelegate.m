@@ -3,6 +3,10 @@
 #import "goodfilmsAppDelegate.h"
 #import "SignInViewController.h"
 
+@interface goodfilmsAppDelegate (privates)
+- (void)configureForSignin;
+@end
+
 @implementation goodfilmsAppDelegate
 
 @synthesize window = _window, tabBarController = _tabBarController;
@@ -27,10 +31,7 @@
     
     self.signInViewController = [[[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil] autorelease];
     
-    __block goodfilmsAppDelegate *blkSelf = self;
-    signInViewController.signInSuccess = ^(AccessToken *token) {
-        [blkSelf.rootController pushViewController:blkSelf.tabBarController animated:YES];
-    };
+    [self configureForSignin];
     
     self.rootController = [[[UINavigationController alloc] initWithRootViewController:signInViewController] autorelease];
     [self.rootController setNavigationBarHidden:YES];
@@ -55,6 +56,18 @@
     return YES;
 }
 
+#pragma mark privates
+- (void)configureForSignin {
+    __block goodfilmsAppDelegate *blkSelf = self;
+    signInViewController.signInSuccess = ^{
+        [blkSelf.rootController pushViewController:blkSelf.tabBarController animated:YES];
+    };
+    signInViewController.signInFailure = ^(NSString *message) {
+        [[[[UIAlertView alloc] initWithTitle:@"Sign in failed" message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Dismiss", nil] autorelease] show];
+    };
+}
+
+#pragma mark unused application lifecycle methods
 - (void)applicationWillResignActive:(UIApplication *)application {
 }
 
