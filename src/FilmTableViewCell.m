@@ -30,14 +30,14 @@
     }()];
 }
 
-+ (void)display:(Film *)film onCell:(UITableViewCell *)cell {
++ (void)display:(FilmStub *)stub onCell:(UITableViewCell *)cell {
     EGOImageView *imageView = (EGOImageView *)[[cell contentView] viewWithTag:IMAGE_TAG];
     UILabel *titleLabel = (UILabel *)[[cell contentView] viewWithTag:TITLE_TAG];
     UILabel *subtitleLabel = (UILabel *)[[cell contentView] viewWithTag:SUBTITLE_TAG];
     
-    titleLabel.text = film.title;
-    subtitleLabel.text = film.year.description;
-    imageView.imageURL = film.imageURL;
+    titleLabel.text = stub.title;
+    subtitleLabel.text = stub.year.description;
+    imageView.imageURL = stub.imageURL;
 }
 
 @end

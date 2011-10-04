@@ -1,5 +1,5 @@
 #import "QueueViewController.h"
-#import "Film.h"
+#import "FilmStub.h"
 #import "Api.h"
 #import "FilmViewController.h"
 #import "FilmTableViewCell.h"
@@ -67,7 +67,7 @@
         [FilmTableViewCell prepare:cell];
     }
     
-    Film *film = [films objectAtIndex:indexPath.row];
+    FilmStub *film = [films objectAtIndex:indexPath.row];
     [FilmTableViewCell display:film onCell:cell];
     
     return cell;

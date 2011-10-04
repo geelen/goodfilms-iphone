@@ -1,5 +1,3 @@
-#import "Film.h"
-
 #import "goodfilmsAppDelegate.h"
 #import "SignInViewController.h"
 

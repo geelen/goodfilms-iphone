@@ -1,5 +1,5 @@
 #import "Api.h"
-#import "Film.h"
+#import "FilmStub.h"
 #import "JSON.h"
 #import "HTTP.h"
 
@@ -66,7 +66,8 @@ NewTypeImplementation(AccessToken, NSString, value)
 + (NSArray *)parseFilms:(NSDictionary *)payload {
     LOGV([payload allKeys]);
     NSArray *films = [payload objectForKey:@"films"] ?: EMPTY_ARRAY;
-    return [films mapOption:functionP(NSDictionaryToFilm)];
+    LOGV([films objectAtIndex:0]);
+    return [films mapOption:functionP(NSDictionaryToFilmStub)];
 }
 
 + (NSString *)slash:(NSString *)bit {

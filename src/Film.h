@@ -7,4 +7,3 @@ NewType4Interface(Film, NSString, title, NSNumber, year, NSString, image_url, NS
 
 + (NSArray *)attributesToShow;
 @end
-
