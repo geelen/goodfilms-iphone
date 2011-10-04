@@ -62,12 +62,12 @@
 
 - (void)handleFacebookAuthentication:(AccessToken *)token {
     dispatch_async([Api apiQueue], ^{
-        AuthenticationResponse *r = [Api authenticate:token]; 
+        FKEither *r = [Api authenticate:token]; 
         dispatch_async(dispatch_get_main_queue(), ^{
-            if ([r isOk]) {
+            if ([r isRight]) {
                 signInSuccess();
             } else {
-                signInFailure(r.humanMessage);
+                signInFailure([r.left.value localizedDescription]);
             }
             [self resetViewState];
         });

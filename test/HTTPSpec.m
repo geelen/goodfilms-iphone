@@ -1,4 +1,5 @@
 #import "HTTPSpec.h"
+#import "Api.h"
 
 @implementation HTTPSpec
 
@@ -7,9 +8,16 @@
     STAssertNotNil(yourApplicationDelegate, @"UIApplication failed to find the AppDelegate");
 }
 
-- (void)testMath {
-    STAssertTrue((1+3)==2, @"Compiler isn't feeling well today :-(" );
-    
+- (void)testLoginFailWithoutMessage {
+    FKEither *r1 = [Api checkForErrors:NSDICT(@"foo", @"error")];
+    NSError *f = r1.left.value;
+    STAssertEqualObjects(f.localizedDescription, @"Couldn't login to Goodfilms.", nil);
+}
+
+- (void)testLoginFailWithMessage {
+    FKEither *r1 = [Api checkForErrors:NSDICT(@"foo", @"error", @"message", @"message")];
+    NSError *f = r1.left.value;
+    STAssertEqualObjects(f.localizedDescription, @"message", nil);
 }
 
 @end

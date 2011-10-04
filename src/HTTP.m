@@ -17,6 +17,8 @@
     NSURL *url = [NSURL URLWithString:stringUrl];
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];    
     configure(request);
+    LOGV(request);
+    LOGV([request HTTPMethod]);
     NSURLResponse *response = NULL;
     NSError *error = NULL;
     NSData *r = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
@@ -30,14 +32,15 @@
 + (FKEither *)get:(NSString *)urlString parameters:(NSDictionary *)parameters {
     NSString *queryString = [self queryString:parameters];
     return [self hit:[NSString stringWithFormat:@"%@?%@", urlString, queryString] request:^(NSMutableURLRequest *request) {
-        [request setHTTPMethod:@"get"];
+        [request setHTTPMethod:@"GET"];
     }];
 }
 
 + (FKEither *)post:(NSString *)urlString parameters:(NSDictionary *)parameters {
     return [self hit:urlString request:^(NSMutableURLRequest *request) {
         NSString *queryString = [self queryString:parameters];
-        [request setHTTPMethod:@"post"];
+        NSLog(@"Post body\n%@", queryString);
+        [request setHTTPMethod:@"POST"];
         [request setHTTPBody:[queryString dataUsingEncoding:NSUTF8StringEncoding]];
     }];
 }

@@ -6,6 +6,6 @@
 @interface HTTPSpec : SenTestCase
 
 - (void)testAppDelegate;
-- (void)testMath;
+//- (void)testMath;
 
 @end

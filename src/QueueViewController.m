@@ -36,8 +36,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     dispatch_async([Api apiQueue], ^{
-        NSArray *newFilms = [Api retrieveQueue];
-        self.films = newFilms;
+        FKEither *r = [Api retrieveQueue];
+        self.films = [r.right orValue:EMPTY_ARRAY];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
