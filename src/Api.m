@@ -36,7 +36,7 @@ NewType2Implementation(AuthenticationResponse, NSString, value, NSString, humanM
 }
 
 + (AuthenticationResponse *)authenticate:(AccessToken *)token {
-    FKEither *responseData = [HTTP get:[self slash:@"/api/login"] parameters:EMPTY_DICT];
+    FKEither *responseData = [HTTP post:[self slash:@"/api/login"] parameters:NSDICT(token.value, @"access_token")];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseJson:)];
     
 #ifdef TESTING_AUTH_OK
