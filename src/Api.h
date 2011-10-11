@@ -7,6 +7,8 @@ NewTypeInterface(AccessToken, NSString, value);
 + (FKEither *)authenticate:(AccessToken *)token;
 + (FKEither *)retrieveQueue;
 
++ (FKEither *)retrieveFilm:(NSNumber *)ident;
+
 + (dispatch_queue_t)apiQueue;
 
 // For testing

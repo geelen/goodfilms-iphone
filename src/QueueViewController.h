@@ -1,7 +1,6 @@
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface QueueViewController : UITableViewController
-
-@property (readwrite, retain) NSArray *films;
+@interface QueueViewController : UITableViewController <EGORefreshTableHeaderDelegate>
 
 @end

@@ -29,6 +29,16 @@
 		47B0C7B014162EBD00D7AB1C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7AE14162EBD00D7AB1C /* Default.png */; };
 		47B5ED7E143B252000320877 /* FilmStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5ED7D143B252000320877 /* FilmStub.m */; };
 		47B5ED7F143B252000320877 /* FilmStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B5ED7D143B252000320877 /* FilmStub.m */; };
+		47BBDDBD144465BB00D667D7 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BBDDB4144465BB00D667D7 /* EGORefreshTableHeaderView.m */; };
+		47BBDDBE144465BB00D667D7 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDB5144465BB00D667D7 /* blackArrow.png */; };
+		47BBDDBF144465BB00D667D7 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDB6144465BB00D667D7 /* blackArrow@2x.png */; };
+		47BBDDC0144465BB00D667D7 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDB7144465BB00D667D7 /* blueArrow.png */; };
+		47BBDDC1144465BB00D667D7 /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDB8144465BB00D667D7 /* blueArrow@2x.png */; };
+		47BBDDC2144465BB00D667D7 /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDB9144465BB00D667D7 /* grayArrow.png */; };
+		47BBDDC3144465BB00D667D7 /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDBA144465BB00D667D7 /* grayArrow@2x.png */; };
+		47BBDDC4144465BB00D667D7 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDBB144465BB00D667D7 /* whiteArrow.png */; };
+		47BBDDC5144465BB00D667D7 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47BBDDBC144465BB00D667D7 /* whiteArrow@2x.png */; };
+		47BBDDC7144466E700D667D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BBDDC6144466E700D667D7 /* QuartzCore.framework */; };
 		47BCACCE14274799003D96D5 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47BCACCD14274799003D96D5 /* FBDialog.bundle */; };
 		F10DA12F140488D7007765C7 /* 45-movie-1.png in Resources */ = {isa = PBXBuildFile; fileRef = F10DA12E140488D7007765C7 /* 45-movie-1.png */; };
 		F118131714037B3C000DF820 /* rango-w342.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F118131614037B3C000DF820 /* rango-w342.jpg */; };
@@ -95,6 +105,17 @@
 		47B0C7AE14162EBD00D7AB1C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		47B5ED7C143B252000320877 /* FilmStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmStub.h; sourceTree = "<group>"; };
 		47B5ED7D143B252000320877 /* FilmStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmStub.m; sourceTree = "<group>"; };
+		47BBDDB3144465BB00D667D7 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		47BBDDB4144465BB00D667D7 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		47BBDDB5144465BB00D667D7 /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		47BBDDB6144465BB00D667D7 /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		47BBDDB7144465BB00D667D7 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		47BBDDB8144465BB00D667D7 /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		47BBDDB9144465BB00D667D7 /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		47BBDDBA144465BB00D667D7 /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		47BBDDBB144465BB00D667D7 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		47BBDDBC144465BB00D667D7 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		47BBDDC6144466E700D667D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		47BCACCD14274799003D96D5 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FBDialog.bundle; path = "dev-packages/facebook-ios-sdk/resources/FBDialog.bundle"; sourceTree = SOURCE_ROOT; };
 		F10DA12E140488D7007765C7 /* 45-movie-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "45-movie-1.png"; sourceTree = "<group>"; };
 		F118131614037B3C000DF820 /* rango-w342.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rango-w342.jpg"; sourceTree = "<group>"; };
@@ -142,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BBDDC7144466E700D667D7 /* QuartzCore.framework in Frameworks */,
 				F189936614038C5000CE83C2 /* MobileCoreServices.framework in Frameworks */,
 				F189936014038BFA00CE83C2 /* libz.1.2.3.dylib in Frameworks */,
 				F189935E14038BE900CE83C2 /* SystemConfiguration.framework in Frameworks */,
@@ -185,6 +207,56 @@
 				473B6E66143085FF00E948CF /* HTTP.m */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		47BBDDAE144465BB00D667D7 /* src-external */ = {
+			isa = PBXGroup;
+			children = (
+				47BBDDAF144465BB00D667D7 /* EGOTableViewPullRefresh */,
+			);
+			name = "src-external";
+			path = "goodfilms.xcodeproj/../src-external";
+			sourceTree = "<group>";
+		};
+		47BBDDAF144465BB00D667D7 /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				47BBDDB0144465BB00D667D7 /* Classes */,
+				47BBDDB1144465BB00D667D7 /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		47BBDDB0144465BB00D667D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47BBDDB2144465BB00D667D7 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		47BBDDB1144465BB00D667D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47BBDDB5144465BB00D667D7 /* blackArrow.png */,
+				47BBDDB6144465BB00D667D7 /* blackArrow@2x.png */,
+				47BBDDB7144465BB00D667D7 /* blueArrow.png */,
+				47BBDDB8144465BB00D667D7 /* blueArrow@2x.png */,
+				47BBDDB9144465BB00D667D7 /* grayArrow.png */,
+				47BBDDBA144465BB00D667D7 /* grayArrow@2x.png */,
+				47BBDDBB144465BB00D667D7 /* whiteArrow.png */,
+				47BBDDBC144465BB00D667D7 /* whiteArrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47BBDDB2144465BB00D667D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47BBDDB3144465BB00D667D7 /* EGORefreshTableHeaderView.h */,
+				47BBDDB4144465BB00D667D7 /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F118131514037B3C000DF820 /* assets */ = {
@@ -262,6 +334,7 @@
 		F164DA1614035A48005D786F = {
 			isa = PBXGroup;
 			children = (
+				47BBDDC6144466E700D667D7 /* QuartzCore.framework */,
 				F189936514038C5000CE83C2 /* MobileCoreServices.framework */,
 				F189936314038C2500CE83C2 /* libicucore.dylib */,
 				F189936114038C0F00CE83C2 /* libiconv.2.dylib */,
@@ -274,6 +347,7 @@
 				F164DA5314035A48005D786F /* goodfilmsTests */,
 				F164DA2414035A48005D786F /* Frameworks */,
 				F164DA2214035A48005D786F /* Products */,
+				47BBDDAE144465BB00D667D7 /* src-external */,
 			);
 			sourceTree = "<group>";
 		};
@@ -430,6 +504,14 @@
 				47B0C7AC14162A9D00D7AB1C /* logo.png in Resources */,
 				47B0C7AF14162EBD00D7AB1C /* Default.png in Resources */,
 				47BCACCE14274799003D96D5 /* FBDialog.bundle in Resources */,
+				47BBDDBE144465BB00D667D7 /* blackArrow.png in Resources */,
+				47BBDDBF144465BB00D667D7 /* blackArrow@2x.png in Resources */,
+				47BBDDC0144465BB00D667D7 /* blueArrow.png in Resources */,
+				47BBDDC1144465BB00D667D7 /* blueArrow@2x.png in Resources */,
+				47BBDDC2144465BB00D667D7 /* grayArrow.png in Resources */,
+				47BBDDC3144465BB00D667D7 /* grayArrow@2x.png in Resources */,
+				47BBDDC4144465BB00D667D7 /* whiteArrow.png in Resources */,
+				47BBDDC5144465BB00D667D7 /* whiteArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +561,7 @@
 				473B6E67143085FF00E948CF /* HTTP.m in Sources */,
 				471B07CB1436A18500659E8D /* FilmTableViewCell.m in Sources */,
 				47B5ED7E143B252000320877 /* FilmStub.m in Sources */,
+				47BBDDBD144465BB00D667D7 /* EGORefreshTableHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

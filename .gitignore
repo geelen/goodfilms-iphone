@@ -17,3 +17,5 @@ project.xcworkspace
 # Kit Noise
 Kits
 dev-packages
+src-external
+gst

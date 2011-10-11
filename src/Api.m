@@ -1,5 +1,6 @@
 #import "Api.h"
 #import "FilmStub.h"
+#import "Film.h"
 #import "JSON.h"
 #import "HTTP.h"
 
@@ -31,6 +32,13 @@ NewTypeImplementation(AccessToken, NSString, value)
 #else
     return jsonResponse;
 #endif
+}
+
++ (FKEither *)retrieveFilm:(NSNumber *)ident {
+    FKEither *responseData = [HTTP get:[self slash:[NSString stringWithFormat:@"film/%@", ident]] parameters:EMPTY_DICT];
+    FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
+    LOGV(jsonResponse);
+    return [jsonResponse.right bind:functionTS([self classAsId], parseFilm:)];
 }
 
 + (dispatch_queue_t)apiQueue {
@@ -68,6 +76,12 @@ NewTypeImplementation(AccessToken, NSString, value)
     NSArray *films = [payload objectForKey:@"films"] ?: EMPTY_ARRAY;
     LOGV([films objectAtIndex:0]);
     return [films mapOption:functionP(NSDictionaryToFilmStub)];
+}
+
++ (FKEither *)parseFilm:(NSDictionary *)payload {
+    NSString *errorMessage = @"Expected a film back from the API, but got something different.";
+    NSDictionary *p = [payload objectForKey:@"film"];
+    return p ? [NSDictionaryToFilm(p) toEitherWithError:errorMessage] : [FKEither errorWithReason:errorMessage];
 }
 
 + (NSString *)slash:(NSString *)bit {

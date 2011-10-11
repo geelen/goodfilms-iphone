@@ -1,8 +1,14 @@
 #import "FilmViewController.h"
+#import "Api.h"
+
+@interface FilmViewController ()
+@property (readwrite, retain) Film *film;
+@property (readwrite, retain) NSArray *attributes;
+@end
 
 @implementation FilmViewController
 
-@synthesize titleLabel, imageView, queueAction, seenIt, film, attributes;
+@synthesize titleLabel, imageView, queueAction, seenIt, film, attributes, filmId;
 
 - (void)dealloc {
     [attributes release];
@@ -11,6 +17,7 @@
     [titleLabel release];
     [imageView release];
     [film release];
+    [filmId release];
     [super dealloc];
 }
 
@@ -18,7 +25,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -33,14 +39,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.attributes = [Film attributesToShow];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    titleLabel.text = film.title;
-    imageView.imageURL = film.imageURL;
-    self.attributes = [Film attributesToShow];
+    dispatch_async([Api apiQueue], ^{
+        FKEither *r = [Api retrieveFilm:filmId];
+        if (r.isRight) {
+            self.film = r.right.value;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                titleLabel.text = film.title;
+                imageView.imageURL = film.imageURL;
+                [self.tableView reloadData];
+            });
+        }
+    });
+
         
     if (rand() % 2 == 0) {
         [queueAction setTitle:@"Add to queue" forState:UIControlStateNormal];
@@ -74,7 +90,6 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.detailTextLabel.numberOfLines = 2;
     }
-    
     
     // Configure the cell...
     NSString *key = [attributes objectAtIndex:indexPath.row];
