@@ -155,8 +155,8 @@
 }
 
 - (void)dismissImage {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [self dismissModalViewControllerAnimated:YES];
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 
 - (IBAction)showImageFullscreen:(id)sender {
