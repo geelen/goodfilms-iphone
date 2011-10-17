@@ -33,6 +33,10 @@ NewType2Implementation(SearchState, NSArray, results, NSString, term);
 }
 
 #pragma mark - View lifecycle
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:NO];
+}
 
 - (void)viewDidUnload {
     [super viewDidUnload];
