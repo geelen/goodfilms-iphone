@@ -19,6 +19,7 @@
 		473B6E7214308F4900E948CF /* goodfilmsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1821403719900290128 /* goodfilmsAppDelegate.m */; };
 		473B6E7314308F4900E948CF /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1851403719900290128 /* QueueViewController.m */; };
 		473B6E7414308F4900E948CF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F160C1881403719900290128 /* SearchViewController.m */; };
+		477F81F8144C3374009A4D73 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 477F81F7144C3374009A4D73 /* libz.1.2.5.dylib */; };
 		47B0C7A41416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
 		47B0C7A51416224700D7AB1C /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B0C7A21416224700D7AB1C /* SignInViewController.m */; };
 		47B0C7A61416224700D7AB1C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47B0C7A31416224700D7AB1C /* SignInViewController.xib */; };
@@ -66,7 +67,6 @@
 		F164DA5814035A48005D786F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F164DA5614035A48005D786F /* InfoPlist.strings */; };
 		F189935C14038BDF00CE83C2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F189935B14038BDF00CE83C2 /* CFNetwork.framework */; };
 		F189935E14038BE900CE83C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F189935D14038BE900CE83C2 /* SystemConfiguration.framework */; };
-		F189936014038BFA00CE83C2 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F189935F14038BFA00CE83C2 /* libz.1.2.3.dylib */; };
 		F189936614038C5000CE83C2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F189936514038C5000CE83C2 /* MobileCoreServices.framework */; };
 		F1BEDEA9140382FA009F915A /* Kit.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F1BEDEA2140382FA009F915A /* Kit.xcconfig */; };
 		F1BEDEAE14038373009F915A /* libKitDeps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BEDEAD140382FB009F915A /* libKitDeps.a */; };
@@ -98,6 +98,7 @@
 		473B6E66143085FF00E948CF /* HTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTP.m; sourceTree = "<group>"; };
 		473B6E6A14308C5300E948CF /* HTTPSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPSpec.h; path = ../test/HTTPSpec.h; sourceTree = "<group>"; };
 		473B6E6B14308C5300E948CF /* HTTPSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPSpec.m; path = ../test/HTTPSpec.m; sourceTree = "<group>"; };
+		477F81F7144C3374009A4D73 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		47B0C7A11416224700D7AB1C /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		47B0C7A21416224700D7AB1C /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		47B0C7A31416224700D7AB1C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
@@ -150,7 +151,6 @@
 		F164DA5714035A48005D786F /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F189935B14038BDF00CE83C2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F189935D14038BE900CE83C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		F189935F14038BFA00CE83C2 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		F189936114038C0F00CE83C2 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = usr/lib/libiconv.2.dylib; sourceTree = SDKROOT; };
 		F189936314038C2500CE83C2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		F189936514038C5000CE83C2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -163,9 +163,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477F81F8144C3374009A4D73 /* libz.1.2.5.dylib in Frameworks */,
 				47BBDDC7144466E700D667D7 /* QuartzCore.framework in Frameworks */,
 				F189936614038C5000CE83C2 /* MobileCoreServices.framework in Frameworks */,
-				F189936014038BFA00CE83C2 /* libz.1.2.3.dylib in Frameworks */,
 				F189935E14038BE900CE83C2 /* SystemConfiguration.framework in Frameworks */,
 				F189935C14038BDF00CE83C2 /* CFNetwork.framework in Frameworks */,
 				F1BEDEAE14038373009F915A /* libKitDeps.a in Frameworks */,
@@ -334,11 +334,11 @@
 		F164DA1614035A48005D786F = {
 			isa = PBXGroup;
 			children = (
+				477F81F7144C3374009A4D73 /* libz.1.2.5.dylib */,
 				47BBDDC6144466E700D667D7 /* QuartzCore.framework */,
 				F189936514038C5000CE83C2 /* MobileCoreServices.framework */,
 				F189936314038C2500CE83C2 /* libicucore.dylib */,
 				F189936114038C0F00CE83C2 /* libiconv.2.dylib */,
-				F189935F14038BFA00CE83C2 /* libz.1.2.3.dylib */,
 				F189935D14038BE900CE83C2 /* SystemConfiguration.framework */,
 				F189935B14038BDF00CE83C2 /* CFNetwork.framework */,
 				F1BEDEA0140382DF009F915A /* Kits */,

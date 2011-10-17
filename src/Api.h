@@ -6,6 +6,7 @@ NewTypeInterface(AccessToken, NSString, value);
 
 + (FKEither *)authenticate:(AccessToken *)token;
 + (FKEither *)retrieveQueue;
++ (FKEither *)search:(NSString *)term;
 
 + (FKEither *)retrieveFilm:(NSNumber *)ident;
 

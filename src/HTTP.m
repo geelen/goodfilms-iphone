@@ -1,6 +1,18 @@
 #import "HTTP.h"
 
+NSString *escape(NSString *textToEncode);
+
+NSString *escape(NSString *textToEncode) {
+    CFStringRef encoded = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, 
+                                                                  (CFStringRef)textToEncode,
+                                                                  NULL, 
+                                                                  (CFStringRef)@";/?:@&=+$,", 
+                                                                  kCFStringEncodingUTF8);
+    return [(NSString *)encoded autorelease];
+}
+
 @implementation HTTP
+
 + (NSString *)queryString:(NSDictionary *)parameters {
     NSMutableString *result = [NSMutableString string];
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
@@ -8,7 +20,7 @@
             [result appendString:@"&"];
         }
         // TODO: escape the keys and values
-        [result appendString:[NSString stringWithFormat:@"%@=%@", key, value]];
+        [result appendString:[NSString stringWithFormat:@"%@=%@", escape(key), escape(value)]];
     }];
     return result;
 }
@@ -17,8 +29,6 @@
     NSURL *url = [NSURL URLWithString:stringUrl];
     NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] initWithURL:url] autorelease];    
     configure(request);
-    LOGV(request);
-    LOGV([request HTTPMethod]);
     NSURLResponse *response = NULL;
     NSError *error = NULL;
     NSData *r = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];

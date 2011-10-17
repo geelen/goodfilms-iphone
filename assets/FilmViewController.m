@@ -173,4 +173,11 @@
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentModalViewController:vc animated:YES];
 }
+
++ (void)pushFilm:(FilmStub *)stub onNavigationController:(UINavigationController *)navigationController {
+    FilmViewController *detailViewController = [[FilmViewController alloc] initWithNibName:@"FilmViewController" bundle:nil];
+    detailViewController.filmId = stub.id;
+    [navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+}
 @end

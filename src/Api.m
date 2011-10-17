@@ -13,7 +13,7 @@ NewTypeImplementation(AccessToken, NSString, value)
 @implementation Api
 
 + (FKEither *)retrieveQueue {
-    FKEither *responseData = [HTTP get:[self slash:@"queue"] parameters:NSDICT(@"lolbfuscation", @"api_key")];
+    FKEither *responseData = [HTTP get:[self slash:@"queue"] parameters:EMPTY_DICT];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
 #ifdef TESTING_QUEUE
     [jsonResponse class]; // No op to prevent warning.
@@ -21,6 +21,12 @@ NewTypeImplementation(AccessToken, NSString, value)
 #else
     return [jsonResponse.right map:functionTS([self classAsId], parseFilms:)];
 #endif
+}
+
++ (FKEither *)search:(NSString *)term {
+    FKEither *responseData = [HTTP get:[self slash:@"search"] parameters:NSDICT(term, @"q")];
+    FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
+    return [jsonResponse.right map:functionTS([self classAsId], parseFilms:)];
 }
 
 + (FKEither *)authenticate:(AccessToken *)token {
@@ -72,9 +78,7 @@ NewTypeImplementation(AccessToken, NSString, value)
 }
 
 + (NSArray *)parseFilms:(NSDictionary *)payload {
-    LOGV([payload allKeys]);
     NSArray *films = [payload objectForKey:@"films"] ?: EMPTY_ARRAY;
-    LOGV([films objectAtIndex:0]);
     return [films mapOption:functionP(NSDictionaryToFilmStub)];
 }
 

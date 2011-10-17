@@ -40,4 +40,7 @@
     imageView.imageURL = stub.imageURL;
 }
 
++ (CGFloat)cellHeight {
+    return 90.0f;
+}
 @end

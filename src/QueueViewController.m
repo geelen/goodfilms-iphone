@@ -43,14 +43,11 @@
     view.delegate = self;
     [self.tableView addSubview:view];
     headerView = view;
-
-    // self.clearsSelectionOnViewWillAppear = NO;
 }
 
 - (void)triggerLoad {
     dispatch_async([Api apiQueue], ^{
         self.isLoading = YES;
-        sleep(3);
         FKEither *r = [Api retrieveQueue];
         self.films = [r.right orValue:EMPTY_ARRAY];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -96,17 +93,13 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    FilmViewController *detailViewController = [[FilmViewController alloc] initWithNibName:@"FilmViewController" bundle:nil];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FilmStub *film = [films objectAtIndex:indexPath.row];
-    detailViewController.filmId = film.id;
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
+    [FilmViewController pushFilm:film onNavigationController:self.navigationController];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90.0f;
+    return [FilmTableViewCell cellHeight];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{	

@@ -1,19 +1,30 @@
 #import "SearchViewController.h"
 #import "FilmTableViewCell.h"
+#import "FilmViewController.h"
+#import "Api.h"
+
+NewType2Implementation(SearchState, NSArray, results, NSString, term);
+
+@interface SearchViewController ()
+@property (readwrite, retain) SearchState *state;
+@property (readwrite, assign) BOOL isLoading;
+@end
 
 @implementation SearchViewController
 
-@synthesize tableView, searchBar;
+@synthesize tableView, searchBar, state, loadingView, isLoading;
 
 - (void)dealloc {
+    [state release];
     [tableView release];
     [searchBar release];
+    [loadingView release];
     [super dealloc];
 }
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
+    if (self) { }
     return self;
 }
 
@@ -23,8 +34,7 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     self.tableView = nil;
 }
@@ -35,39 +45,69 @@
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.state ? (self.state.results.count ?: 1)  : 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        [FilmTableViewCell prepare:cell];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.state && self.state.results.count == 0) {
+        static NSString *NoResultsIdent = @"NoResultsCell";
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NoResultsIdent];
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NoResultsIdent] autorelease];
+        }
+        cell.textLabel.text = @"No results found.";
+        return cell;
+    } else {
+        static NSString *CellIdentifier = @"FilmCell";
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+            [FilmTableViewCell prepare:cell];
+        }
+        
+        FilmStub *f = [self.state.results objectAtIndex:indexPath.row];
+        [FilmTableViewCell display:f onCell:cell];    
+        return cell;
     }
-    
-    // Configure the cell...
-    
-    return cell;
 }
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    if (state.results.count) {
+        [FilmViewController pushFilm:[self.state.results objectAtIndex:indexPath.row] onNavigationController:self.navigationController];
+    }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [FilmTableViewCell cellHeight];
+}
+
+#pragma mark UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *searchText = self.searchBar.text;
+    if (self.searchBar.text.length < 2) {
+        return;
+    }
+    self.state = nil;
+    loadingView.hidden = NO;
+    [self.searchBar resignFirstResponder];
+    self.isLoading = YES;
+    
+    dispatch_async([Api apiQueue], ^{
+        FKEither *r = [Api search:searchText];
+        self.state = [SearchState results:[r.right orValue:EMPTY_ARRAY]  term:searchText];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.isLoading = NO;
+            [self.tableView reloadData];
+            self.loadingView.hidden = YES;
+//            [headerView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+        });
+    });
+}
 @end

@@ -7,4 +7,5 @@
 
 + (void)display:(FilmStub *)stub onCell:(UITableViewCell *)cell;
 
++ (CGFloat)cellHeight;
 @end
