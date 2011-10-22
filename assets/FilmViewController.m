@@ -155,6 +155,7 @@
     NSLog(@"seen it");
     AddRatingViewController *avc = [[[AddRatingViewController alloc] initWithNibName:@"AddRatingViewController" bundle:nil] autorelease];
     avc.film = self.film;
+    avc.delegate = self;
     UINavigationController *wrapper = [[[UINavigationController alloc] initWithRootViewController:avc] autorelease];
     wrapper.navigationBar.barStyle = UIBarStyleBlack;
     
@@ -179,6 +180,14 @@
     }()];
     vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentModalViewController:vc animated:YES];
+}
+
+#pragma mark AddRatingDelegate
+- (void)rate:(Film *)f withQuality:(float)quality andRewatchability:(float)rewatchability {
+    NSString *info = [NSString stringWithFormat:@"Would have rated %@ with quality %f and rewatchability %f", f.title, quality, rewatchability];
+    UIAlertView *v = [[[UIAlertView alloc] initWithTitle:@"STUB" message:info delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil] autorelease];
+    [v show];
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 + (void)pushFilm:(FilmStub *)stub onNavigationController:(UINavigationController *)navigationController {

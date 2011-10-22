@@ -2,8 +2,9 @@
 #import "Film.h"
 #import "EGOImageButton.h"
 #import "FilmStub.h"
+#import "AddRatingViewController.h"
 
-@interface FilmViewController : UITableViewController
+@interface FilmViewController : UITableViewController <AddRatingDelegate>
 
 @property (readwrite, retain) NSNumber *filmId;
 

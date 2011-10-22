@@ -13,7 +13,7 @@
 @synthesize rewatchabilityInfo;
 @synthesize rateIt;
 @synthesize quality, rewatchability;
-@synthesize film;
+@synthesize film, delegate;
 
 - (void)dealloc {
     [quality release];
@@ -44,6 +44,10 @@
 
 - (void)changeRateState {
     rateIt.enabled = hasSetQuality && hasSetRewatchability;
+}
+
+- (IBAction)sendRating:(id)sender {
+    [delegate rate:film withQuality:quality.value andRewatchability:rewatchability.value];
 }
 
 - (IBAction)qualityChanged:(id)sender {
