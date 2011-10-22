@@ -16,8 +16,8 @@ alpha:((c)&0xFF)/255.0]
 
 
 // Testing Toggles
-//#define TESTING_FACEBOOK_TOKEN [AccessToken value:@"ABC"]
-//#define TESTING_AUTH_OK
-//#define TESTING_QUEUE NSARRAY([FilmStub title:@"Some Film" year:[NSNumber numberWithInt:2011] image_url:@""])
+#define TESTING_FACEBOOK_TOKEN [AccessToken value:@"ABC"]
+#define TESTING_AUTH_OK
+#define TESTING_QUEUE NSARRAY([FilmStub id:[NSNumber numberWithInt:1] title:@"Some Film" year:[NSNumber numberWithInt:2011] image_url:@""])
 
 #endif

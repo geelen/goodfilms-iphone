@@ -28,6 +28,7 @@
     [super viewDidLoad];
     signInButton.backgroundColor = HEXCOLOR(0x333333ff);
     signInButton.layer.cornerRadius = 5.0f;
+    signInButton.titleLabel.font = [UIFont fontWithName:@"Lato-Italic" size:24.0f];
     self.title = @"Sign in";
 }
 

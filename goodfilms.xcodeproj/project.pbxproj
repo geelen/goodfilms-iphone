@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		471B07CB1436A18500659E8D /* FilmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 471B07CA1436A18500659E8D /* FilmTableViewCell.m */; };
+		4728C31014522E6B008A9E6C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C2FF14522E6B008A9E6C /* Lato-Black.ttf */; };
+		4728C31114522E6B008A9E6C /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30014522E6B008A9E6C /* Lato-BlackItalic.ttf */; };
+		4728C31214522E6B008A9E6C /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30114522E6B008A9E6C /* Lato-Bold.ttf */; };
+		4728C31314522E6B008A9E6C /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30214522E6B008A9E6C /* Lato-BoldItalic.ttf */; };
+		4728C31414522E6B008A9E6C /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30314522E6B008A9E6C /* Lato-Hairline.ttf */; };
+		4728C31514522E6B008A9E6C /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30414522E6B008A9E6C /* Lato-HairlineItalic.ttf */; };
+		4728C31614522E6B008A9E6C /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30514522E6B008A9E6C /* Lato-Italic.ttf */; };
+		4728C31714522E6B008A9E6C /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30614522E6B008A9E6C /* Lato-Light.ttf */; };
+		4728C31814522E6B008A9E6C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30714522E6B008A9E6C /* Lato-LightItalic.ttf */; };
+		4728C31914522E6B008A9E6C /* Lato-Regular.menu in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30814522E6B008A9E6C /* Lato-Regular.menu */; };
+		4728C31A14522E6B008A9E6C /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30914522E6B008A9E6C /* Lato-Regular.ttf */; };
+		4728C31B14522E6B008A9E6C /* md5sum in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30A14522E6B008A9E6C /* md5sum */; };
+		4728C31C14522E6B008A9E6C /* METADATA in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30B14522E6B008A9E6C /* METADATA */; };
+		4728C31D14522E6B008A9E6C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30C14522E6B008A9E6C /* OFL.txt */; };
+		4728C31E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg */; };
+		4728C31F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg */; };
 		473B6E63143084E500E948CF /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E62143084E500E948CF /* JSON.m */; };
 		473B6E64143084E500E948CF /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E62143084E500E948CF /* JSON.m */; };
 		473B6E67143085FF00E948CF /* HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E66143085FF00E948CF /* HTTP.m */; };
@@ -92,6 +108,22 @@
 /* Begin PBXFileReference section */
 		471B07C91436A18500659E8D /* FilmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmTableViewCell.h; sourceTree = "<group>"; };
 		471B07CA1436A18500659E8D /* FilmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmTableViewCell.m; sourceTree = "<group>"; };
+		4728C2FF14522E6B008A9E6C /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		4728C30014522E6B008A9E6C /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4728C30114522E6B008A9E6C /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		4728C30214522E6B008A9E6C /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4728C30314522E6B008A9E6C /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		4728C30414522E6B008A9E6C /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		4728C30514522E6B008A9E6C /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		4728C30614522E6B008A9E6C /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		4728C30714522E6B008A9E6C /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		4728C30814522E6B008A9E6C /* Lato-Regular.menu */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.menu"; sourceTree = "<group>"; };
+		4728C30914522E6B008A9E6C /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		4728C30A14522E6B008A9E6C /* md5sum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = md5sum; sourceTree = "<group>"; };
+		4728C30B14522E6B008A9E6C /* METADATA */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = METADATA; sourceTree = "<group>"; };
+		4728C30C14522E6B008A9E6C /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4728C30E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Łukasz_Dziedzic-colour.jpg"; sourceTree = "<group>"; };
+		4728C30F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Łukasz_Dziedzic.jpg"; sourceTree = "<group>"; };
 		473B6E61143084E500E948CF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		473B6E62143084E500E948CF /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		473B6E65143085FF00E948CF /* HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTP.h; sourceTree = "<group>"; };
@@ -198,6 +230,37 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
+		4728C2FE14522E6B008A9E6C /* lato */ = {
+			isa = PBXGroup;
+			children = (
+				4728C2FF14522E6B008A9E6C /* Lato-Black.ttf */,
+				4728C30014522E6B008A9E6C /* Lato-BlackItalic.ttf */,
+				4728C30114522E6B008A9E6C /* Lato-Bold.ttf */,
+				4728C30214522E6B008A9E6C /* Lato-BoldItalic.ttf */,
+				4728C30314522E6B008A9E6C /* Lato-Hairline.ttf */,
+				4728C30414522E6B008A9E6C /* Lato-HairlineItalic.ttf */,
+				4728C30514522E6B008A9E6C /* Lato-Italic.ttf */,
+				4728C30614522E6B008A9E6C /* Lato-Light.ttf */,
+				4728C30714522E6B008A9E6C /* Lato-LightItalic.ttf */,
+				4728C30814522E6B008A9E6C /* Lato-Regular.menu */,
+				4728C30914522E6B008A9E6C /* Lato-Regular.ttf */,
+				4728C30A14522E6B008A9E6C /* md5sum */,
+				4728C30B14522E6B008A9E6C /* METADATA */,
+				4728C30C14522E6B008A9E6C /* OFL.txt */,
+				4728C30D14522E6B008A9E6C /* src */,
+			);
+			path = lato;
+			sourceTree = "<group>";
+		};
+		4728C30D14522E6B008A9E6C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4728C30E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg */,
+				4728C30F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		473B6E60143084C300E948CF /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +325,7 @@
 		F118131514037B3C000DF820 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				4728C2FE14522E6B008A9E6C /* lato */,
 				47BCACCD14274799003D96D5 /* FBDialog.bundle */,
 				47B0C7AE14162EBD00D7AB1C /* Default.png */,
 				47B0C7AB14162A9D00D7AB1C /* logo.png */,
@@ -512,6 +576,22 @@
 				47BBDDC3144465BB00D667D7 /* grayArrow@2x.png in Resources */,
 				47BBDDC4144465BB00D667D7 /* whiteArrow.png in Resources */,
 				47BBDDC5144465BB00D667D7 /* whiteArrow@2x.png in Resources */,
+				4728C31014522E6B008A9E6C /* Lato-Black.ttf in Resources */,
+				4728C31114522E6B008A9E6C /* Lato-BlackItalic.ttf in Resources */,
+				4728C31214522E6B008A9E6C /* Lato-Bold.ttf in Resources */,
+				4728C31314522E6B008A9E6C /* Lato-BoldItalic.ttf in Resources */,
+				4728C31414522E6B008A9E6C /* Lato-Hairline.ttf in Resources */,
+				4728C31514522E6B008A9E6C /* Lato-HairlineItalic.ttf in Resources */,
+				4728C31614522E6B008A9E6C /* Lato-Italic.ttf in Resources */,
+				4728C31714522E6B008A9E6C /* Lato-Light.ttf in Resources */,
+				4728C31814522E6B008A9E6C /* Lato-LightItalic.ttf in Resources */,
+				4728C31914522E6B008A9E6C /* Lato-Regular.menu in Resources */,
+				4728C31A14522E6B008A9E6C /* Lato-Regular.ttf in Resources */,
+				4728C31B14522E6B008A9E6C /* md5sum in Resources */,
+				4728C31C14522E6B008A9E6C /* METADATA in Resources */,
+				4728C31D14522E6B008A9E6C /* OFL.txt in Resources */,
+				4728C31E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg in Resources */,
+				4728C31F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

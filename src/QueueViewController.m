@@ -42,6 +42,8 @@
     EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
     view.delegate = self;
     [self.tableView addSubview:view];
+    
+    [FilmTableViewCell prepareTableView:self.tableView];
     headerView = view;
 }
 
@@ -76,19 +78,9 @@
     return films.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-        [FilmTableViewCell prepare:cell];
-    }
-    
-    FilmStub *film = [films objectAtIndex:indexPath.row];
-    [FilmTableViewCell display:film onCell:cell];
-    return cell;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {    
+    FilmStub *film = [films objectAtIndex:indexPath.row];    
+    return [FilmTableViewCell cellForFilmStub:film forTableView:self.tableView];
 }
 
 #pragma mark - Table view delegate

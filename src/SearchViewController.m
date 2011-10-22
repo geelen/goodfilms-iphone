@@ -33,6 +33,12 @@ NewType2Implementation(SearchState, NSArray, results, NSString, term);
 }
 
 #pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [FilmTableViewCell prepareTableView:self.tableView];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:NO];
@@ -66,16 +72,8 @@ NewType2Implementation(SearchState, NSArray, results, NSString, term);
         cell.textLabel.text = @"No results found.";
         return cell;
     } else {
-        static NSString *CellIdentifier = @"FilmCell";
-        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-            [FilmTableViewCell prepare:cell];
-        }
-        
         FilmStub *f = [self.state.results objectAtIndex:indexPath.row];
-        [FilmTableViewCell display:f onCell:cell];    
-        return cell;
+        return [FilmTableViewCell cellForFilmStub:f forTableView:self.tableView];
     }
 }
 

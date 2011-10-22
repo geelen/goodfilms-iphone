@@ -17,7 +17,7 @@ NewTypeImplementation(AccessToken, NSString, value)
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
 #ifdef TESTING_QUEUE
     [jsonResponse class]; // No op to prevent warning.
-    return TESTING_QUEUE;
+    return [FKEither rightWithValue:TESTING_QUEUE];
 #else
     return [jsonResponse.right map:functionTS([self classAsId], parseFilms:)];
 #endif
@@ -26,7 +26,13 @@ NewTypeImplementation(AccessToken, NSString, value)
 + (FKEither *)search:(NSString *)term {
     FKEither *responseData = [HTTP get:[self slash:@"search"] parameters:NSDICT(term, @"q")];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
+    
+#ifdef TESTING_QUEUE
+    [jsonResponse class]; // No op to prevent warning.
+    return [FKEither rightWithValue:TESTING_QUEUE];
+#else
     return [jsonResponse.right map:functionTS([self classAsId], parseFilms:)];
+#endif
 }
 
 + (FKEither *)authenticate:(AccessToken *)token {
