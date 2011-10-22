@@ -1,5 +1,6 @@
 #import "FilmViewController.h"
 #import "Api.h"
+#import "AddRatingViewController.h"
 
 @interface FilmViewController ()
 @property (readwrite, retain) Film *film;
@@ -152,6 +153,12 @@
 
 - (IBAction)seenIt:(id)sender {
     NSLog(@"seen it");
+    AddRatingViewController *avc = [[[AddRatingViewController alloc] initWithNibName:@"AddRatingViewController" bundle:nil] autorelease];
+    avc.film = self.film;
+    UINavigationController *wrapper = [[[UINavigationController alloc] initWithRootViewController:avc] autorelease];
+    wrapper.navigationBar.barStyle = UIBarStyleBlack;
+    
+    [self presentModalViewController:wrapper animated:YES];
 }
 
 - (void)dismissImage {

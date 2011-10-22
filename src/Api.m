@@ -39,7 +39,7 @@ NewTypeImplementation(AccessToken, NSString, value)
     FKEither *responseData = [HTTP post:[self slash:@"login"] parameters:NSDICT(token.value, @"access_token")];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
 #ifdef TESTING_AUTH_OK
-    [jsonResponse class]; // no op to prevent warning;
+    [jsonResponse class]; // suppresses unused variable warning
     return [FKEither rightWithValue:EMPTY_DICT];
 #else
     return jsonResponse;
@@ -49,8 +49,12 @@ NewTypeImplementation(AccessToken, NSString, value)
 + (FKEither *)retrieveFilm:(NSNumber *)ident {
     FKEither *responseData = [HTTP get:[self slash:[NSString stringWithFormat:@"film/%@", ident]] parameters:EMPTY_DICT];
     FKEither *jsonResponse = [responseData.right bind:functionTS([self classAsId], parseAndCheck:)];
-    LOGV(jsonResponse);
+#ifdef TESTING_FILM
+    [jsonResponse class]; // suppresses unused variable warning
+    return [FKEither rightWithValue:TESTING_FILM];
+#else
     return [jsonResponse.right bind:functionTS([self classAsId], parseFilm:)];
+#endif
 }
 
 + (dispatch_queue_t)apiQueue {

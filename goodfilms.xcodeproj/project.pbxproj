@@ -24,6 +24,8 @@
 		4728C31D14522E6B008A9E6C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30C14522E6B008A9E6C /* OFL.txt */; };
 		4728C31E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg */; };
 		4728C31F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4728C30F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg */; };
+		47357F1D14528CC0009CBC05 /* AddRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47357F1B14528CC0009CBC05 /* AddRatingViewController.m */; };
+		47357F1E14528CC0009CBC05 /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47357F1C14528CC0009CBC05 /* AddRatingViewController.xib */; };
 		473B6E63143084E500E948CF /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E62143084E500E948CF /* JSON.m */; };
 		473B6E64143084E500E948CF /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E62143084E500E948CF /* JSON.m */; };
 		473B6E67143085FF00E948CF /* HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 473B6E66143085FF00E948CF /* HTTP.m */; };
@@ -124,6 +126,9 @@
 		4728C30C14522E6B008A9E6C /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4728C30E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Łukasz_Dziedzic-colour.jpg"; sourceTree = "<group>"; };
 		4728C30F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Łukasz_Dziedzic.jpg"; sourceTree = "<group>"; };
+		47357F1A14528CC0009CBC05 /* AddRatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRatingViewController.h; sourceTree = "<group>"; };
+		47357F1B14528CC0009CBC05 /* AddRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRatingViewController.m; sourceTree = "<group>"; };
+		47357F1C14528CC0009CBC05 /* AddRatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRatingViewController.xib; sourceTree = "<group>"; };
 		473B6E61143084E500E948CF /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		473B6E62143084E500E948CF /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		473B6E65143085FF00E948CF /* HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTP.h; sourceTree = "<group>"; };
@@ -339,6 +344,9 @@
 		F160C1771403719900290128 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				47357F1A14528CC0009CBC05 /* AddRatingViewController.h */,
+				47357F1B14528CC0009CBC05 /* AddRatingViewController.m */,
+				47357F1C14528CC0009CBC05 /* AddRatingViewController.xib */,
 				471B07C81436A16E00659E8D /* UI */,
 				473B6E60143084C300E948CF /* Util */,
 				F160C19A140371F100290128 /* Other */,
@@ -592,6 +600,7 @@
 				4728C31D14522E6B008A9E6C /* OFL.txt in Resources */,
 				4728C31E14522E6B008A9E6C /* Łukasz_Dziedzic-colour.jpg in Resources */,
 				4728C31F14522E6B008A9E6C /* Łukasz_Dziedzic.jpg in Resources */,
+				47357F1E14528CC0009CBC05 /* AddRatingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +651,7 @@
 				471B07CB1436A18500659E8D /* FilmTableViewCell.m in Sources */,
 				47B5ED7E143B252000320877 /* FilmStub.m in Sources */,
 				47BBDDBD144465BB00D667D7 /* EGORefreshTableHeaderView.m in Sources */,
+				47357F1D14528CC0009CBC05 /* AddRatingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
