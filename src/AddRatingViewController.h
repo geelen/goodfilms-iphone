@@ -2,7 +2,7 @@
 #import "Film.h"
 
 @protocol AddRatingDelegate <NSObject>
-- (void)rate:(Film *)film withQuality:(float)quality andRewatchability:(float)rewatchability;
+- (void)rate:(Film *)film withRating:(Rating *)rating;
 @end
 
 @interface AddRatingViewController : UIViewController

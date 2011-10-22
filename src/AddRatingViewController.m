@@ -47,7 +47,7 @@
 }
 
 - (IBAction)sendRating:(id)sender {
-    [delegate rate:film withQuality:quality.value andRewatchability:rewatchability.value];
+    [delegate rate:film withRating:[Rating qualityValue:quality.value rewatchabilityValue:rewatchability.value]];
 }
 
 - (IBAction)qualityChanged:(id)sender {

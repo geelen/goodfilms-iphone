@@ -12,3 +12,20 @@ NewType4Implementation(Film, NSString, title, NSNumber, year, NSString, image_ur
     return [NSArray arrayWithObjects:@"director", @"starring", @"runtime", nil];
 }
 @end
+
+NewType2Implementation(Rating, NSNumber, quality, NSNumber, rewatchability)
+
+@implementation Rating (more)
+
+- (float)qualityValue {
+    return [self.quality floatValue];
+}
+
+- (float)rewatchabilityValue {
+    return [self.rewatchability floatValue];
+}
+
++ (Rating *)qualityValue:(float)quality rewatchabilityValue:(float)rewatchability {
+    return [self quality:[NSNumber numberWithFloat:quality] rewatchability:[NSNumber numberWithFloat:rewatchability]];
+}
+@end

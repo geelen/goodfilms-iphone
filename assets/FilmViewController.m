@@ -183,8 +183,8 @@
 }
 
 #pragma mark AddRatingDelegate
-- (void)rate:(Film *)f withQuality:(float)quality andRewatchability:(float)rewatchability {
-    NSString *info = [NSString stringWithFormat:@"Would have rated %@ with quality %f and rewatchability %f", f.title, quality, rewatchability];
+- (void)rate:(Film *)f withRating:(Rating *)rating {
+    NSString *info = [NSString stringWithFormat:@"Would have rated %@ with %@", f.title, rating];
     UIAlertView *v = [[[UIAlertView alloc] initWithTitle:@"STUB" message:info delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil] autorelease];
     [v show];
     [self dismissModalViewControllerAnimated:YES];
