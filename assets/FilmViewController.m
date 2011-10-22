@@ -57,7 +57,6 @@
             });
         }
     });
-
         
     if (rand() % 2 == 0) {
         [queueAction setTitle:@"Add to queue" forState:UIControlStateNormal];
