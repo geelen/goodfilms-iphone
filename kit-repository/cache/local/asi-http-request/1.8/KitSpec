@@ -1,0 +1,8 @@
+{
+    "name": "asi-http-request"
+  , "version": "1.8"
+  , "dependencies": [
+    {"name": "reachability", "version": "2.2" }
+  ]
+  , "source-directory" : "Classes"
+}
